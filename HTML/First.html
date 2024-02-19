@@ -2,10 +2,35 @@
 <html>
 	<head>
 		<title>This is my first webpage!!</title>
+		<style rel="stylesheet">
+			*{
+				margin: 0 auto;
+			}
+			body {
+				background-color: #123;
+			}
+			.navContainer {
+				background-color: #354;
+				padding: 30px;
+			}
+			.navContainer a {
+				color: #FFFFf3;
+			}
+			.navContainer, .listTags {
+				width: 90%;
+			}
+			.listTags,
+			.specialHTMLTags {
+				background-color: #cba179;
+				color: #334;
+				padding: 30px;
+				width: 90%;
+			}
+		</style>
 	</head>
 	<body>
 		
-		<div>
+		<div class="navContainer">
 			<span>
 				<a href="./First.html">First Page</a>
 			</span>
@@ -13,13 +38,60 @@
 				<a href="./Second.html">Second Page </a>
 			</span>
 		</div>
-		<div>
-			<h1>This is H1 tag</h1>
+		<div style="background-color:lightcoral; color: #FFFFFF; padding:30px; width: 90%;">
+			<h1>This is H1 tag, the most important heading tag</h1>
 			<h2>This is H2 tag</h2>
 			<h3>This is H3 Tag</h3>
 			<h4>This is H4 tag</h4>
 			<h5>This is H5 Tag</h5>
-			<h6>This is H6 Tag</h6>
+			<h6>This is H6 Tag. This is least important heading tag</h6>
 		</div>
+
+		<div class="listTags">
+			<h3>Ordered List Example</h3>
+			<div class="orderList">
+				<ol>
+					<li>Order List Item </li>
+					<li>Order List Item</li>
+					<li>Order List Item</li>
+					<li>Order List Item</li>
+					<li>Order List Item</li>
+				</ol>
+			</div>
+
+			<h3>Unordered List Example</h3>
+			<div class="unorderList">
+				<li>Unorder List Item</li>
+				<li>Unorder List Item</li>
+				<li>Unorder List Item</li>
+				<li>Unorder List Item</li>
+				<li>Unorder List Item</li>
+				<li>Unorder List Item</li>
+			</div>
+
+			<h3>Definition List Example</h3>
+			<div class="definitionList">
+				<dl>
+					<dt>Definition Term 1</dt>
+					<dd>Definition 1</dd>
+					<dt>Definition Term 2</dt>
+					<dd>Definition 2</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="specialHTMLTags">
+			<p> This is bold text statement <b>Text to be bolded</b></p>
+			<p><i>Italicized text</i></p>
+			<p><u>Underlined text</u></p>
+			<p >The following text is striked through <s>Text to be striked through</s></p>
+			<p>The superscript text <sup>Superscript Text</sup></p>
+			<p>Subscript <sub>text</sub></p>
+			<p>Next text is smaller one, <small>Smaller Text</small></p>
+
+			<p>Bigger text <big>Text to be displayed in bigger font size</big></p>
+			<div>This is highlighted text <mark>Highlighted Text</mark></div>
+		</div>
+
 	</body>
 </html>

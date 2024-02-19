@@ -1,0 +1,19 @@
+*{
+	margin: 0 auto;
+}
+body {
+	background-color: gray;
+}
+#mainConent {
+	background-color: white;
+	width: 90%;
+}
+
+#mainConent, .footer {
+	padding: 20px;
+}
+
+.footer {
+	background-color: #251dcf;
+	width: 90%;
+}
