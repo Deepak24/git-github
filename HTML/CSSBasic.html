@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>We are practicing CSS basics</title>
+		<style rel="stylesheet">
+			.internalCSS{
+				background-color: #5ec645;
+				color: #FFFFFF;
+				margin: 0 auto;
+				padding: 30px;
+				width: 90%;
+			}
+			.internalCSSDiv{
+				padding: 20px;
+			}
+		</style>
+		<link rel="stylesheet" href="../assets/css/basic.css" />
+	</head>
+	<body>
+		<div class="inlineCSS">
+			<div class="inlineDiv" style="background-color: #236734; padding: 20px;">
+				<p>This is paragraph one</p>
+				<p>This is paragraph two</p>
+				<p>This is paragraph three</p>
+				<p>This is paragraph four</p>
+
+			</div>
+		</div>
+
+		<div class="internalCSS">
+			<div class="internalCSSDiv">
+				<div class="innerDiv">
+					<p>This internal div section contains different input elements.</p>
+					<label>Enter Your Name:</label>
+					<input class="inputCSS" type="text" name="innerName" value="" placeholder="Enter Your Name..." />
+					<br/><br/>
+					<label>Please enter your password:</label>
+					<input class="inputCSS" type="password" name="formPassword" placeholder="password" value="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="externalCSS">
+			<div class="externalCSSDiv">
+				<div >We are using External CSS in this block.</div>
+				<div class="customTable">
+					<div class="thead">
+						<div class="">Name</div>
+						<div class="">Address</div>
+						<div class="">City</div>
+					</div>
+					<div class="tbody">
+						<div class="tbodyRow">
+							<div class="">Deepak</div>
+							<div class="">MH India</div>
+							<div class="">Pune</div>
+						</div>
+						<div class="tbodyRow">
+							<div class="">Omkar</div>
+							<div class="">UP India</div>
+							<div class="">KP</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="opacityDiv">
+			<div class="innerOpacity">
+				<h1>Hello World!!</h1>
+				<p>This is the dummy text.</p>
+			</div>
+		</div>
+	</body>
+</html>

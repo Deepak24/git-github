@@ -1,0 +1,30 @@
+/*  
+This is the external style sheet link in CSSBasic.html file
+ */
+.externalCSS,
+.opacityDiv {
+	background-color: #cabed3;
+	margin: 0 auto;
+	padding: 30px;
+	width: 90%;
+}
+
+.externalCSSDiv {
+	padding: 20px;
+}
+.externalCSSDiv .thead,
+.externalCSSDiv .tbodyRow {
+	display: flex;
+	justify-content: space-around;
+}
+.externalCSSDiv .thead,
+.externalCSSDiv .tbodyRow {
+	border: 1px solid #345;
+}
+
+.innerOpacity {
+	background-color: #0637e3;
+	color: #FFFFFF;
+	opacity: 0.7;
+	padding: 20px;
+}

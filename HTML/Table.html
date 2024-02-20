@@ -4,28 +4,88 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Table example</title>
+
+		<style rel="stylesheet">
+			.firstTable, .secondTable{
+				margin: 0 auto;
+				background-color: #346754;
+				padding: 30px;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				color: rgb(44, 112, 29);
+			}
+
+			th, td {
+				text-align: left;
+				padding: 8px;
+			}
+
+			th {
+				background-color: rgb(229, 123, 123);
+			}
+
+			tr:nth-child(odd) {
+				color: #FFFFFF;
+			}
+			tr:nth-child(even) {
+				background-color: #66dfec;
+			}
+
+		</style>
 	</head>
 	<body>
-		<table border="1">
-			<tr>
-				<th rowspan="4">Heading</th>
-				<th colspan="3">Details</th>
-			</tr>
-			<tr>
-				<th>Sr No.</th>
-				<th>Name</th>
-				<th>City</th>
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Deepak</td>
-				<td>Pune</td>
-			</tr>
-			<tr>
-				<td>2.</td>
-				<td>Deepak K</td>
-				<td>Pune</td>
-			</tr>
-		</table>
+		<div class="firstTable">
+			<div>
+				This is the first table
+			</div>
+			<table border="1">
+				<tr>
+					<th rowspan="4">Heading</th>
+					<th colspan="3">Details</th>
+				</tr>
+				<tr>
+					<th>Sr No.</th>
+					<th>Name</th>
+					<th>City</th>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Deepak</td>
+					<td>Pune</td>
+				</tr>
+				<tr>
+					<td>2.</td>
+					<td>Deepak K</td>
+					<td>Pune</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="secondTable">
+			<div>
+				This is the second table
+			</div>
+			<table>
+		        <tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Age</th>
+		        </tr>
+		        <tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>25</td>
+		        </tr>
+		        <tr>
+					<td>Jane</td>
+					<td>Doe</td>
+					<td>30</td>
+		        </tr>
+	      	</table>
+		</div>
 	</body>
 </html>
