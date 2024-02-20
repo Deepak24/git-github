@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Checking the different input types
+		</title>
+		<style rel="stylesheet">
+			*{
+				margin: 0 auto;
+			}
+			.inputWrapperDiv{
+				width: 90%;
+				background-color: darkcyan;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="inputWrapperDiv">
+			<div><h1>Checking the input type examples, </h1></div>
+			<div >Input Type Text</div>
+			<input type="text" name="inputText" />
+			<br/><br/>
+			<div >Input Type Text with placeholder</div>
+			<input type="text" name="inputText1" placeholder="Enter your name..." />
+			<br/><br/>
+
+			<div >Input Type Password</div>
+			<input type="password" name="inputPass" />
+			<br/><br/>
+
+			<div >Input Type Radio</div>
+			<input type="radio" name="gender" value="male" />
+			<label>Male</label>
+			<input type="radio" name="gender" value="female" />
+			<label>Female</label>
+			<br/><br/>
+
+			<div >Input Type Checkbox</div>
+			<input type="checkbox" name="hobby1" value="reading" />
+			<label>Reading</label>
+			<input type="checkbox" name="hobby2" value="writting" />
+			<label>Writing</label>
+			<br/><br/>
+
+			<div >Input Type Button</div>
+			<input type="button" name="btn1" value="Click me" onclick="alert('Hi');" />
+			<br/><br/>
+
+			<div >Input Type Color</div>
+			<input type="color" name="bgcolor" value="#ff2234" />
+			<br/><br/>
+
+			<div >Input Type File</div>
+			<input type="file" name="myfile" accept=".pdf, .jpg" />
+			<br/><br/>
+
+			<div >Input Type Date</div>
+			<input type="date" name="dob" min="2024-01-01" max="2024-11-30" value="2024-06-30" />
+			<br/><br/>
+
+			<div >Input Type Month</div>
+			<input type="month" name="mydatemonth" min="2024-10" value="2024-11" />
+			<br/><br/>
+
+			<div >Input Type Time</div>
+			<input type="time" name="mydateTime" value="12:00:05" />
+			<br/><br/>
+
+			<div >Input Type DateTime</div>
+			<input type="datetime-local" name="mydateTimeLLocal" value="2024-11-24T12:00:05" />
+			<br/><br/>
+
+			<div >Input Type week</div>
+			<input type="week" name="mydateweek" value="2024-w20" />
+			<br/><br/>
+
+			<div >Input Type Number</div>
+			<input type="number" name="numberCount" min="2" max="25" step="2" />
+			<br/><br/>
+
+			<div >Input Type Range</div>
+			<input type="range" name="numberRange" min="1" max="125" step="2" />
+			<br/><br/>
+		</div>
+
+	</body>
+</html>
