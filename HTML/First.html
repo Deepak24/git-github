@@ -31,7 +31,7 @@
 	</head>
 	<body>		
 		<div class="navContainer">
-			<span>
+			<span style="margin-right: 10px;">
 				<a href="./First.html">First Page</a>
 			</span>
 			<span>
@@ -58,16 +58,43 @@
 					<li>Order List Item</li>
 				</ol>
 			</div>
+			<br/><br/>
+
+			<div class="nestedOrderList">
+				<ol type="a">
+					<li>Order List Item </li>
+					<li>Order List Item</li>
+					<li>This is third Item
+						<ol type="A">
+							<li>
+								First inner item
+							</li>
+							<li>
+								Second Inner Item
+							</li>
+							<li>
+								Third Inner Item
+							</li>
+						</ol>
+					</li>
+					<li>Order List Item</li>
+					<li>Order List Item</li>
+				</ol>
+			</div>
+			<br/><br/>
 
 			<h3>Unordered List Example</h3>
 			<div class="unorderList">
-				<li>Unorder List Item</li>
-				<li>Unorder List Item</li>
-				<li>Unorder List Item</li>
-				<li>Unorder List Item</li>
-				<li>Unorder List Item</li>
-				<li>Unorder List Item</li>
+				<ul>
+					<li>Unorder List Item</li>
+					<li>Unorder List Item</li>
+					<li>Unorder List Item</li>
+					<li>Unorder List Item</li>
+					<li>Unorder List Item</li>
+					<li>Unorder List Item</li>
+				</ul>
 			</div>
+			<br /><br/>
 
 			<h3>Definition List Example</h3>
 			<div class="definitionList">
@@ -81,10 +108,12 @@
 		</div>
 
 		<div class="specialHTMLTags">
-			<p> This is bold text statement <b>Text to be bolded</b></p>
-			<p><i>Italicized text</i></p>
+			<p> This is bold text statement with b tag <b>Text to be bolded</b></p>
+			<p>Using i tag <i>Italicized text</i> Making text italic using <b>em tag</b> <em>This is italic using em</em></p>
 			<p><u>Underlined text</u></p>
-			<p >The following text is striked through <s>Text to be striked through</s></p>
+			<p >The text is striked through with <b>s tag</b> <s>Text to be striked through</s>
+				And another way for making striked through text using <b>del tag </b>
+				<del> strikethrough </del></p>
 			<p>The superscript text <sup>Superscript Text</sup></p>
 			<p>Subscript <sub>text</sub></p>
 			<p>Next text is smaller one, <small>Smaller Text</small></p>
