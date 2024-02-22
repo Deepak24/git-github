@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Images and Videos Example</title>
+        <style>
+            /* Styles for images and videos on desktop screens */
+            img, video {
+              max-width: 100%;
+              height: auto;
+            }
+
+            /* Styles for images and videos on mobile screens */
+            @media screen and (max-width: 768px) {
+              img, video {
+                max-width: 100%;
+                height: auto;
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Example using CSS max-width property -->
+        <h2>Responsive Image with CSS max-width</h2>
+        <img src="./goh-rhy-yan-_aXPi9HNIE4-unsplash.jpg" alt="Example using CSS max-width property" style="max-width: 100%;">
+
+        <h2>Responsive Video with CSS max-width</h2>
+        <video src="./Secondary Memory.mkv" controls style="max-width: 100%;"></video>
+
+        <!-- Example using picture element with srcset attribute -->
+        <h2>Responsive Image with picture element and srcset attribute</h2>
+        <picture>
+            <source srcset="kalea-morgan-0DRiy9RR4mw-unsplash (1)-large.jpg" media="(min-width: 1200px)">
+            <source srcset="kalea-morgan-0DRiy9RR4mw-unsplash (1)-medium.jpg" media="(min-width: 768px)">
+            <img src="./kalea-morgan-0DRiy9RR4mw-unsplash (1).jpg" alt="Example using picture element with srcset attribute">
+        </picture>
+
+        <h2>Responsive Video with picture element and srcset attribute</h2>
+        <picture>
+            <source srcset="Secondary Memory-large.mkv" media="(min-width: 1200px)">
+            <source srcset="Secondary Memory-medium.mkv" media="(min-width: 768px)">
+            <video src="./Secondary Memory.mkv" controls></video>
+        </picture>
+    </body>
+</html>
