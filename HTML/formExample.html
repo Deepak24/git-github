@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This is basic form example</title>
+	</head>
+	<body>
+		<form action="/submitFormData" method="post" target="_blank">
+			<p>Form content</p>
+			<input type="text" name="email" placeholder="Enter your email" /><br/><br/>
+			<input type="password" name="password" placeholder="Please enter password" /><br/><br/>
+			<fieldset>
+				<legend>Form Fields</legend>
+				<input type="text" name="userCity" list="mycities" placeholder="Enter your city name" />
+				<datalist id="mycities">
+					<option value="name1">
+					<option value="name 2">
+					<option value="name 3">
+					<option value="name 4">
+				</datalist>
+				<br /><br/>
+				<label >User Age </label><br/>
+				<select name="userAge">
+					<option value="">Select Age</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+				</select>
+				<br/><br/>
+			</fieldset>
+			<br/>
+			<input type="submit" value="Login" />
+		</form>
+	</body>
+</html>
