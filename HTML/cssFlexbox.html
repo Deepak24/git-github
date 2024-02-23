@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Basic 2 - Flex box changes</title>
+		
+		<link rel="stylesheet" href="../assets/css/basic1.css" />
+		<style rel="stylesheet">
+			.container {
+				background-color: aqua;
+				padding: 20px;
+				color: red;
+				margin: 20px;
+				width: 500px;
+			}
+
+			.flexContainer {
+				background-color: aqua;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			.box1{
+				width: 400px;
+				height: 100px;
+				margin: 10px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="">This is my website.</h1>
+			<h1 class="h1Class">We are checking flexbox CSS changes.</h1>
+			<p>This is my paragraph.</p>
+		</div>
+
+		<div class="flexContainer">
+			<div class="box1"></div>
+			<div class="box1"></div>
+			<div class="box1"></div>
+		</div>
+	</body>
+</html>
