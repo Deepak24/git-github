@@ -1,0 +1,27 @@
+.navigation{
+	background-color: deepskyblue;
+	display: flex;
+	flex-flow: row wrap;
+	font-weight: bold;
+	list-style-type: none;
+	justify-content: flex-end;
+	margin: 0;
+	/*text-align: center;*/
+	padding: 20px;
+}
+.navigation a{
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.navigation a:hover{
+	background-color: #232445;
+}
+
+@media all and (max-width: 600px) {
+	.navigation {
+		flex-flow: column wrap;
+		
+	}
+}
