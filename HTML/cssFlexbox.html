@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CSS Basic 2 - Flex box changes</title>
+		<title>CSS Basic 2 - Flex box</title>
 		
 		<link rel="stylesheet" href="../assets/css/basic1.css" />
 		<style rel="stylesheet">
@@ -30,6 +30,27 @@
 				margin: 10px;
 				background-color: red;
 			}
+
+			.containerflexcount {
+		        background-color: aquamarine;
+		        max-width: 800px;
+		        min-height: 400px;
+		    }
+		    .containerflexcount p {
+		        background-color: rosybrown;
+		        color: black;
+		        font-size: 25px;
+		        border: 1px solid black;
+		        box-sizing: border-box;
+		    }
+		    .containerflexcount{
+		        display: flex;
+		        flex-direction: row-reverse;
+		        justify-content: space-between;
+		        align-items: center;
+		        flex-wrap: wrap;
+
+		    }
 		</style>
 	</head>
 	<body>
@@ -44,5 +65,13 @@
 			<div class="box1"></div>
 			<div class="box1"></div>
 		</div>
+
+		<div class="containerflexcount">
+       		<p>Hey</p>
+	        <p>THere</p>
+	        <p>how</p>
+	        <p>are</p>
+	        <p>you</p>
+	    </div>
 	</body>
 </html>
