@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Template HTML example</title>
+	    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+	</head>
+	<body>
+		<h2>We are checking template tag</h2>
+		<template id="customTemplate">
+			<h2>This is template tag example</h2>
+			<p>P tag example.</p>
+		</template>
+
+
+		<template id="parentTemplate">
+			<h2>This is the parent template</h2>
+			<template id="childTemplate">
+				<h2>This is child template.</h2>
+			</template>
+		</template>
+
+	</body>
+
+	<script type="text/javascript">
+		const data = {
+			title : "This is updated title",
+			description: "This is updated description"
+		}
+
+		const template = document.getElementById("customTemplate");
+		const content = template.content.cloneNode(true);
+		content.querySelector("h2").innerHTML = data.title;
+		content.querySelector("p").innerHTML = data.description;
+		document.body.appendChild(content);
+
+
+		const parentTemplate = document.getElementById("parentTemplate");
+		const parentContent = parentTemplate.content.cloneNode(true);
+
+		const childTemplate = parentContent.querySelector("#childTemplate");
+		const childContent = childTemplate.content.cloneNode(true);
+		parentContent.appendChild(childContent);
+		document.body.appendChild(parentContent);
+	</script>
+</html>

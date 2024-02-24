@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">	    
+		<title>
+			HTML Canvas
+		</title>
+
+		<style rel="stylesheet">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				background-color: #333;
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			canvas{
+				border-radius: 5px;
+				background-color: #FFFFFF;
+				width: 80%;
+				height: 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="customCanvas" >
+		</canvas>
+	</body>
+	<script >
+		const canvas = document.getElementById("customCanvas");
+		const ctx = canvas.getContext("2d");
+
+		//Rectangle shapre
+		ctx.fillStyle = "pink";
+		ctx.fillRect(80, 30, 40, 55);
+
+		//Stroke rectangle
+		ctx.linwidth = 5;
+		ctx.strokeStyle = "red";
+		ctx.strokeRect(70, 15, 80, 60); 
+
+		ctx.linewidth=2
+		ctx.strokeStyle="yellow"
+		ctx.strokeRect(130,30,80,30);
+
+		//Fill text
+		ctx.font="30th April";
+		ctx.fillStyle = "aqua";
+		ctx.fillText("Hello There!", 35, 90);
+
+		//Stroke text
+		ctx.strokeStyle = "purple";
+		ctx.strokeText("He l l o w o r l d", 15, 50);
+
+		//Lines
+
+		ctx.beginPath();
+		ctx.moveTo(200, 350);
+		ctx.lineTo(100, 50);
+		ctx.lineTo(100, 100);
+		ctx.lineTo(50, 100);
+		ctx.closePath();
+
+		ctx.linewidth = 5;
+		ctx.strokeStyle = "red";
+		ctx.stroke();
+		ctx.fillStyle = "paleGreen";
+		ctx.fill();
+
+		//Draw circle
+		ctx.beginPath();
+		ctx.arc(250, 100, 40, 0, Math.PI*2);
+		ctx.strokeStyle = "darked";
+		ctx.stroke();
+		ctx.fillStyle = "paleGreen";
+		ctx.fill();
+
+	</script>
+</html>
