@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Flexbox new example,</title>
+
+		<style rel="stylesheet">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.containerflexcount{
+				background-color: aquamarine;
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				max-width: 800px;
+				min-height: 400px;
+
+			}
+			.containerflexcount p {
+				background-color: rosybrown;
+				color: black;
+				font-size: 25px;
+				border: 1px solid black;
+				box-sizing: border-box;
+			}
+			p{
+		        width: 350px;
+		        height: 70px;
+		    }
+		    p:nth-child(2){
+		        flex-grow: 2;
+		        flex-shrink: 2;
+		        flex-basis: 100px;
+		    }
+		    p:nth-child(1){
+		        flex-grow: 1;
+		        flex-shrink: 1;
+		        flex-basis: 100px;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="containerflexcount">
+			<p>Hey</p>
+			<p>There</p>
+			<p>How </p>
+			<p>are</p>
+			<p>you?	</p>
+		</div>
+	</body>
+</html>
