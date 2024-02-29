@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid properties</title>
+    </head>
+    <style rel="stylesheet">
+        .container{
+            background-color: aqua;
+            border: 2px solid black;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 800px;
+            height: 400px;
+            grid-template-rows: 1fr 2fr 1fr;
+        }
+        .gridBox {
+            background-color: #444;
+            color: #FFF;
+            padding: 10px;
+            font-size: 24px;
+        }
+        .gridBox:nth-child(1) {
+            background-color: greenyellow;
+            grid-column: 1 / 4;
+        }
+        .gridBox:nth-child(2) {
+            background-color: blueviolet;
+            grid-column: 1 / 2;
+        }
+        .gridBox:nth-child(3) {
+            background-color: hotpink;
+            grid-column: 2/4;
+        }
+        .gridBox:nth-child(4) {
+            background-color: burlywood;
+            grid-column: 1/4;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="gridBox">Grid 1</div>
+            <div class="gridBox">Grid 2</div>
+            <div class="gridBox">Grid 3</div>
+            <div class="gridBox">Grid 4</div>
+        </div>
+        
+    </body>
+</html> 

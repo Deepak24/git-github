@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid Template properties</title>
+        <style rel="stylesheet">
+            .container{
+               display: grid;
+               grid-template-columns: 1fr 3fr;
+               grid-template-rows: 100px 300px 100px;
+               grid-template-areas: 
+               "header header"
+               "sidebar content"
+               "footer footer";
+            }
+
+            .item{
+                border-radius: 5px;
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .header {
+                grid-area: header;
+                background-color: red;
+            }
+            .sidebar{
+                grid-area: sidebar;
+                background-color: forestgreen;
+            }
+            .content{
+                grid-area: content;
+                background-color: darkcyan;
+            }
+            .footer{
+                grid-area: footer;
+                background-color: chocolate;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item header">Header</div>
+            <div class="item sidebar">Sidebar </div>
+            <div class="item content">Content</div>
+            <div class="item footer">Footer </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid Animation properties</title>
+        <style rel="stylesheet">
+            .container{
+                background-color: aqua;
+                height: 500px;
+                width:600px;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: cornflowerblue;
+            }
+            .box:hover{
+                animation-name: customanimation;
+                animation-duration: 2s;
+            }
+            @keyframes customanimation {
+                0%{
+                    background-color: black;
+                    transform: translate(0, 0);
+                }
+                25%{
+                    background-color: red;
+                    transform: translate(400px, 0);
+                }
+                50%{
+                    background-color: yellow;
+                    transform: translate(400px, 400px);
+                }
+                75%{
+                    background-color: springgreen;
+                    transform: translate(0, 400px);
+                }
+                100%{
+                    background-color: black;
+                    transform: translate(0, 0);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">Box</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid Template properties</title>
+        <style rel="stylesheet">
+            .gridContainer{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+            }
+            .item{
+                background-color: aqua;
+                padding: 20px;
+
+            }
+            @media screen and (min-width:800px){
+                .gridContainer{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 10px;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="gridContainer">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </body>
+</html>
