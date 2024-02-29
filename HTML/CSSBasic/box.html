@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS box model</title>
+	</head>
+	<style rel="stylesheet">
+		.box{
+			background-color: aqua;
+			border: 2px solid red;
+			color: rebeccapurple;
+			height: 100px;
+			width: 200px;
+			padding: 15px;
+			margin: 30px;
+		}
+		.inlineElement {
+			background-color: red;
+		}	
+		.blockElement{
+			background-color: cornflowerblue;
+		}
+		.inlineElement, .blockElement{
+			border: 4px solid darkkhaki;
+			margin: 20px;
+			padding: 10px;
+			width: 200px;
+			box-sizing: border-box;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="customDiv"></div>
+			<p>This is paragraph inside the div.</p>
+		</div>
+
+		<span class="inlineElement">This is inline element</span>
+		<div class="blockElement">This is block element</div>
+	</body>
+</html>

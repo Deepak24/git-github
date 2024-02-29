@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			CSS Basics with font style
+		</title>
+		<style rel="stylesheet">
+			html {
+				font-size: 15px;
+			}
+			.container{
+				background-color: aqua;
+				font-size: 16px;
+				width: 60%;
+			}
+			.absolutepx {
+				font-size: 50px;
+				width: 50%;
+			}
+			.relativeem {
+				font-size: 1.5em;
+			}
+			.relativerem{
+				font-size: 1.5rem;
+			}
+			.withch{
+				width: 50ch;
+			}
+			.containerHt {
+				background-color: darkcyan;
+				color: white;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div>Checking basic font and other style changes.</div>
+			<p class="absolutepx">This is paragraph tag</p>
+			<p class="relativeem">This is a em paragraph</p>
+			<p class="relativerem">This is a rem paragraph</p>
+			<p>This is long paragraph with the default width of container size</p>
+			<p class="withch">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt tempore, molestiae, consequuntur doloribus libero quam delectus eos, possimus facilis quibusdam laudantium quisquam magnam blanditiis rerum. Labore maiores voluptatum voluptatibus nemo.
+			</p>
+		</div>
+
+		<div class="containerHt">
+			<p>This is paragraph tag</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			This is display properties 
+		</title>
+	</head>
+	<style rel="stylesheet">
+		.container {
+			background-color: darkcyan;
+			padding: 30px;
+		}
+		.displayInline {
+			background-color: chocolate;
+			color: #FFFFFF;
+			display: inline-block;
+			height: 100px;
+			width: 200px;
+			padding: 20px;
+			margin: 20px;
+		}
+		.displayFlexContainer {
+			background-color: firebrick;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
+			padding: 20px;
+		}
+		.flexBox {
+			background-color: cornflowerblue;
+			color: ghostwhite;
+			padding: 20px;
+			margin: 20px;
+		}
+		.gridExample {
+			background-color: crimson;
+			color: #FFFFFF;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 30px;
+		}
+		.gridBox {
+			background-color: palevioletred;
+			padding: 20px;
+			margin: 10px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="displayInline">This is inline </div>
+			<div class="displayInline">This is inline </div>
+			<div class="displayInline">This is inline </div>
+		</div>
+
+		<div class="displayFlexContainer">
+			<div class="">Flex</div>
+			<div class="flexBox">This is the flex box</div>
+			<div class="flexBox">This is the flex box</div>
+			<div class="flexBox">This is the flex box</div>
+			<div class="flexBox">This is the flex box</div>
+		</div>
+
+
+		<div class="">Grid Layout</div>
+		<div class="gridExample">
+			<div class="gridBox">Grid 1</div>
+			<div class="gridBox">Grid 2</div>
+			<div class="gridBox">Grid 3</div>
+			<div class="gridBox">Grid 4</div>
+			<div class="gridBox">Grid 5</div>
+			<div class="gridBox">Grid 6</div>
+		</div>
+	</body>
+</html>
