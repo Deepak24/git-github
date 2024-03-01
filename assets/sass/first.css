@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: red;
+}
+h1:hover {
+  color: blue;
+}
+
+.operatorsass {
+  font-size: 70px;
+  color: green;
+}
+
+.container {
+  background-color: #fab;
+}
+.container p {
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.mixinUse {
+  background-color: violet;
+  color: white;
+  border: 5px solid #efa;
+  padding: 20px;
+}/*# sourceMappingURL=first.css.map */

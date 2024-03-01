@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS Grid layout</title>
+	</head>
+	<style rel="stylesheet">
+		.container{
+			background-color: pink;
+			grid-template-columns: 100px 200px 300px;
+			width: 800px;
+			height: 600px;
+			display: grid;
+		}
+		.gridItem{
+			background-color: coral;
+			color: whitesmoke;
+			padding: 20px;
+			font-size: 20px;
+		}
+		.gridItem:nth-child(1) {
+			grid-column: 1/4;
+			background-color: crimson;
+		}
+		.gridItem:nth-child(2) {
+			grid-column: 1/2;
+			background-color: rosybrown;
+		}
+		.gridItem:nth-child(3) {
+			grid-column: 2/4;
+			background-color: greenyellow;
+		}
+		.gridItem:nth-child(4) {
+			grid-column: 1/4;
+			background-color: blueviolet;
+		}
+		.container{
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="gridItem">Header</div>
+			<div class="gridItem">Sidebar</div>
+			<div class="gridItem">Content</div>
+			<div class="gridItem">Footer
+			</div>
+		</div>
+	</body>
+</html>

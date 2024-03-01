@@ -1,3 +1,7 @@
 /Images
 /assets/audio
 /assets/video
+
+#We are excluding the sass and map files
+/assets/sass/*.sass
+/assets/sass/*.map
