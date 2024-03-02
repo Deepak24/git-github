@@ -7,9 +7,12 @@
 </head>
 <body>
     <form id="customForm">
-        Name: <input type="text" name="name" id="name" /> <br/>
-        Age: <input type="text" name="age" id="age" /> <br/>
-        Mobile: <input type="text" name="mobile" id="mobile" /> <br/>
+        <label>Name: </label>
+        <input type="text" name="name" id="name" /> <br/><br/>
+        <label>Age: </label>
+        <input type="text" name="age" id="age" /> <br/><br/>
+        <label>Mobile: </label>
+        <input type="text" name="mobile" id="mobile" /> <br/><br/>
         <input type="submit" value="submit" />
     </form>
 
@@ -21,40 +24,50 @@
             var nameField = document.getElementById("name");
             var ageField = document.getElementById("age");
             var mobileField = document.getElementById("mobile");
+            //Regex
             var nameRegex = /^[a-zA-Z ]+$/;
             var ageRegex = /^[0-9]{1,2}$/;
             var mobRegex = /^[6-9][0-9]{9}$/;
+
             //validation
             if( nameField.value === "" ){
                 alert("Please enter name.");
+                nameField.focus();
                 return false;
             }
             //Regex condition for nameField
             if( !nameRegex.test(nameField.value) ) {
-                alert("Only numbers allowed.");
+                alert("Only alphabets allowed.");
+                nameField.focus();
                 return false;
             }
             if( ageField.value === "" ) {
                 alert("Please enter age.");
+                ageField.focus();
                 return false;
             }
 
-            //Regex condition for nameField
+            //Regex condition for ageField
             if( !ageRegex.test(ageField.value) ) {
-                alert("Only numbers allowed.");
+                alert("Only 2 digit numbers are allowed.");
+                ageField.focus();
                 return false;
             }
 
             if( mobileField.value === "" ){
                 alert("Please enter mobile.");
+                mobileField.focus();
                 return false;
             }
 
             //Regex condition for mobileField
-            if( !mobileRegex.test(mobileField.value) ) {
-                alert("Only numbers allowed.");
+            if( !mobRegex.test(mobileField.value) ) {
+                alert("Only 10 digit phone number allowed.");
+                mobileField.focus();
                 return false;
             }
+
+            alert("All validations are successful. We can submit the form.");
         });
     </script>
 </body>
