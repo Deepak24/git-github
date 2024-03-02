@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Event Function</title>
+    </head>
+    <body onload="changeBgColor('red')">
+        <h2>Event Function</h2>
+        <input type="button" value="Change Color" onmouseover="changeBgColor('blue');"
+        onmouseleave="changeBgColor('white');"/>
+        <script>
+            function changeBgColor(value) {
+                document.bgColor=value;
+            }
+        </script>
+
+    </body>
+</html>

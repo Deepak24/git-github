@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Create ELement</title>
+</head>
+<body>
+    <ul id="menu"></ul>
+    <button id="btn">Get Menu</button>
+    
+    <script>
+        var menu = document.getElementById("menu");    
+        var btn = document.getElementById("btn");   
+
+        btn.addEventListener("click", function(){
+            var category = ["Home", "About", "Contact", "Menu"];
+            category.forEach(function(val){
+                var ele = document.createElement("li");
+                ele.textContent = val;
+                menu.appendChild(ele);
+            });
+        });
+    </script>
+</body>
+</html>

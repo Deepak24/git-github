@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+    <form id="customForm">
+        Name: <input type="text" name="name" id="name" /> <br/>
+        Age: <input type="text" name="age" id="age" /> <br/>
+        Mobile: <input type="text" name="mobile" id="mobile" /> <br/>
+        <input type="submit" value="submit" />
+    </form>
+
+    <script>
+        var frm = document.getElementById("customForm");
+        frm.addEventListener("submit", function(event){
+            //Prevent form submission
+            event.preventDefault();
+            var nameField = document.getElementById("name");
+            var ageField = document.getElementById("age");
+            var mobileField = document.getElementById("mobile");
+            var nameRegex = /^[a-zA-Z ]+$/;
+            var ageRegex = /^[0-9]{1,2}$/;
+            var mobRegex = /^[6-9][0-9]{9}$/;
+            //validation
+            if( nameField.value === "" ){
+                alert("Please enter name.");
+                return false;
+            }
+            //Regex condition for nameField
+            if( !nameRegex.test(nameField.value) ) {
+                alert("Only numbers allowed.");
+                return false;
+            }
+            if( ageField.value === "" ) {
+                alert("Please enter age.");
+                return false;
+            }
+
+            //Regex condition for nameField
+            if( !ageRegex.test(ageField.value) ) {
+                alert("Only numbers allowed.");
+                return false;
+            }
+
+            if( mobileField.value === "" ){
+                alert("Please enter mobile.");
+                return false;
+            }
+
+            //Regex condition for mobileField
+            if( !mobileRegex.test(mobileField.value) ) {
+                alert("Only numbers allowed.");
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
