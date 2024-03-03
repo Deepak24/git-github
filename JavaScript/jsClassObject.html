@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Class Object </title>
+    </head>
+    <body>
+        <script>
+            class Employee {
+                constroctor(name) {
+                    this._name = name;
+
+                }
+                getEmployee() {
+                    return this._name;
+                }
+
+                setData(newData){
+                    this._name = newData;
+                }
+            }
+
+            const obj = new Employee("Deep");
+            console.log(obj.getEmployee());
+            obj.setData("Deepak");
+            console.log(obj.getEmployee());
+        </script>
+    </body>
+</html>

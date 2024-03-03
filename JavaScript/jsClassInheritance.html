@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class inheritance</title>
+</head>
+<body>
+    <script>
+        class A {
+            abc(){
+                return "Deepak";
+            }
+            
+        }
+        class B extends A {
+            bca(){
+                let x = "Amit";
+                let y = super.abc();
+                console.log(`${x} and ${y} are best friends.`);
+            }
+        }
+
+        const obj = new B();
+        obj.bca();
+    </script>
+</body>
+</html>

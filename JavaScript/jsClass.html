@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class Example</title>
+</head>
+<body>
+        <script>
+            class Car {
+                constructor(){
+                    this.speed = 50;
+                }
+                acc(){
+                    this.speed += 70;
+                }
+
+                checkSpeed(){
+                    console.log(`The Speed is ${this.speed}`);
+                }
+            }
+
+            const obj = new Car();
+            obj.checkSpeed();
+            obj.acc();
+            
+        </script>
+</body>
+</html>
