@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Rest Operator Example</title>
+    </head>
+    <body>
+        <h2>Rest Operator</h2>
+        <script>
+            function myAddition( ...args ){
+                let sum = 0;
+                args.forEach(val => sum+= val);
+                return sum; 
+            }
+
+            console.log(myAddition());
+            console.log(myAddition(2,3));
+            console.log(myAddition(2, 3, 5, 6));
+            console.log(myAddition(3, 5,12));
+        </script>
+    </body>
+</html>
