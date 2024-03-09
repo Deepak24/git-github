@@ -71,15 +71,17 @@
                 address : {
                     city : "pune",
                     state : "Maharashtra"
-                }
+                },
+                hobbies : ["Reading", "Writing", "Exercise"]
             }
             console.log(person3);
             for (let key in person3) {
                 console.log(`Key is ${key} : value is ${person3[key]}`);
             }
 
-            person3.address.forEach(address => {
-                console.log(address);
+            console.log(person3.address);
+            person3.hobbies.forEach(hobby => {
+                console.log(hobby);
             });
         </script>
     </body>
