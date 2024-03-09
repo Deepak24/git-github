@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Function Demo</title>
+    </head>
+    <body>
+        <h1>We are demontrating the JS Function.</h1>
+        <p>Basic function</p>
+        <p>Rest parameter example,</p>
+        <script >
+            
+            //function multiply
+            function multiply(num1, num2 ){
+                return num1 * num2;
+            }
+
+            //Call the function
+            console.log(multiply(3, 5));
+
+            function greet(strName = "World"){
+                console.log("Hello", strName);
+            }
+
+            greet();
+            greet("Deepak");
+
+            //Rest Parameters example
+            function sum(...nums){
+                let total = 0;
+                for(const num of nums) {
+                    total += num;
+                }
+                return total;
+            }
+
+            console.log(sum(1, 2, 3));
+            console.log(sum(5, 6, 7, 2));
+
+            //Assigning the function to const
+            const Intro = function(strName1) {
+                console.log(strName1);
+            }
+
+            console.log("We are checking function assignment", Intro);
+
+            //Function calculating the summation and difference of 2 variables
+            function calculate(operation, a, b){
+                return operation(a,b);
+            }
+
+            const summation = function(a,b) {
+                return a+b;
+            }
+
+            const difference = function(a,b){
+                return a-b;
+            }
+            console.log(calculate(summation, 5,3));
+            console.log(calculate(difference, 6,2));
+
+            //Anonymous function
+            let square = function(x) {
+                return x * x;
+            }
+
+            console.log("We are printing the square of number with anonymous function..");
+            console.log(square(5));
+        </script>
+    </body>
+</html>
