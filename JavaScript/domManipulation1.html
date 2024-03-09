@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Maipulation example</title>
+    </head>
+    <body>
+        <h2>DOM Mannipulation Example.</h2>
+        <div id="MyId" class="myDiv" data-value="10">
+            Hello World!!
+        </div>
+        <script>
+            //Get element
+            const myDiv = document.querySelector("#MyId");
+
+            //Modify the attribute
+            myDiv.setAttribute('id', "newId");
+            myDiv.setAttribute('class', "newClass");
+            myDiv.setAttribute('data-value', "30");
+
+            myDiv.textContent= "Good Bye World!!";
+        </script>
+    </body>
+</html>
