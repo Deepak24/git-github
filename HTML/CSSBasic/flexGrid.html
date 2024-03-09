@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Basic - Flex and Grid</title>
+        <style rel="stylesheet">
+            .container{
+                background-color: rosybrown;
+                color: darkslateblue;
+                max-width: 1200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px; 
+                margin: 0 auto;
+            }
+            .header{
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .product-grid{
+                background-color: cornflowerblue;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-gap: 30px;
+                padding: 30px;
+            }
+            .product{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: #FFF;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Product Listing Page</h1>
+            </div>
+            <div class="product-grid">
+                <div class="product">
+                    <h2>Product 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="product">
+                    <h2>Product 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="product">
+                    <h2>Product 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="product">
+                    <h2>Product 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+            <div class="footer">
+                Footer section.
+            </div>
+        </div>
+    </body>
+</html>
