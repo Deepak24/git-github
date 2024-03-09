@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Operator Example</title>
+    </head>
+    <body>
+        <h2>JS operator example</h2>
+
+        <script>
+            let var1 = 5;
+            let var2 = '5';
+
+            //Checking the comparision operator
+            console.log(var1 == 5);
+            console.log(var2 == 5);
+            console.log(var1 == var1);
+            console.log(var1 == var2);
+
+            console.log("inequal operaor");
+            console.log(var1 != 6);
+
+            console.log(0 == false);
+            console.log(0 == null);
+
+            //object 
+            let obj1 = {'var1' : 'value'};
+            let obj2 = {'var2' : 'value'};
+
+            console.log("Comparision results for objects var");
+            console.log(obj1.var1 == 'value');
+            console.log(obj1 == obj2);
+            console.log(obj1.var1 == obj2.var2);
+
+            console.log(0 == undefined);
+            console.log(null == undefined);
+
+
+            //Greater than operator
+            let varr1 = 5;
+            let varr2 = '5';
+
+            console.log("Printing the comparision operator");
+            console.log(varr1 > 0);
+            console.log(varr1 > varr2);
+            console.log(varr1 > 10);
+            console.log(varr2 > "10");
+
+            //object operator
+            let obj12 = {"var1": 3};
+            let obj123 = {"var2" : 5};
+
+            console.log("Checking the result for object comparision operator.");
+            console.log(obj12.var1 <= obj123.var2);
+            console.log(obj12 <= obj123);
+            console.log(obj12.var1 <= 10);
+            console.log(obj123.var2 <= 2);
+            console.log(obj123.var2 <= 10);
+
+        </script>
+    </body>
+</html>
