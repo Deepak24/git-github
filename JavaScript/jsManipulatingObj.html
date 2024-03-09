@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Manipulating the Object and Arrays</title>
+    </head>
+    <body>
+        <h2>We are checking JS object with it's manipulation</h2>
+        <script>
+            //Accessing object 
+            const person = {
+                name : "Deepak",
+                lName : "Khamkar",
+                address : {
+                    street : "east way",
+                    road : "M G Road",
+                    city : "Pune",
+                    State : "Maharashtra"
+                },
+                hobbies : ["Reading", "Writing", "Exercise"]
+
+            }
+
+            console.log(person);
+            console.log(person.name);
+            console.log(person['address']['city']);
+            console.log(person['hobbies'][2]);
+
+        //Adding properties
+        const person1 = {
+            perName : "Deepak",
+            age : 25
+        }
+        console.log(person1);
+        console.log("Adding properties to object");
+        person1.address = {
+            road : "New M G Road",
+            city : "Mumbai",
+            state : "MH"
+        }
+
+        console.log(person1);
+
+        person1.hobbies = ["reading", "writing"];
+
+        console.log(person1);
+
+        //Deletion
+        const person2 = {
+                name: 'John',
+                age: 30,
+                address: {
+                    street: '123 Main St',
+                    city: 'New York',
+                    state: 'NY'
+                },
+                hobbies: ['reading', 'swimming', 'traveling']
+            };
+            
+            console.log("Before deletion", person2);
+            delete person2.address;
+
+            console.log(person2);
+
+            //Looping
+            const person3 = {
+                name : "Deepak",
+                lName : "Khamkar",
+                age : 35,
+                address : {
+                    city : "pune",
+                    state : "Maharashtra"
+                }
+            }
+            console.log(person3);
+            for (let key in person3) {
+                console.log(`Key is ${key} : value is ${person3[key]}`);
+            }
+
+            person3.address.forEach(address => {
+                console.log(address);
+            });
+        </script>
+    </body>
+</html>

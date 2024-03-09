@@ -22,6 +22,20 @@
             // person.delete.lastName;
             // console.log(person);
 
+            //New Object
+            const employee = {
+                name : "Deepak",
+                lName : "Khamkar",
+                age : 35
+            }
+
+            console.log(employee);
+
+            const newEmployee = Object.create(employee);
+            newEmployee.age = 25;
+            console.log("New Employee Name", newEmployee.name);
+            console.log("New Employee Age", newEmployee.age);
+
         </script>        
     </body>
 </html>

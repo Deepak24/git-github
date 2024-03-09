@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Predefined method examples</title>
+    </head>
+    <body>
+        <h2>We are checking JS predefine methods</h2>
+        <p>Predefined methods like, </p>
+        <b>push, splice, map, reduce, filter</b>
+
+        <script>
+            //Example of Array push and splice functions
+
+            let arrNew = ["Apple", "banana", "cherry"];
+            console.log(arrNew.length);//Output 3
+
+            arrNew.push("Date");
+            console.log(arrNew);//Output - [ "Apple", "banana", "cherry", "Date" ]
+
+            arrNew.splice(1, 1, "Orange");
+            console.log(arrNew); // Output - [ "Apple", "Orange", "cherry", "Date" ]
+
+            //Map
+            const arrMap = [1, 2, 3, 4, 5];
+            const arrNewMap = arrMap.map(num => num * num);
+            console.log(arrNewMap);
+
+            //Array Reduce 
+            const arrReduce = [1, 2,3,4,5];
+            const arrReduceSum = arrReduce.reduce((acc, num) => acc + num, 0);
+            console.log(arrReduceSum);
+
+            //Array Filter
+            const arrFil = [1, 2, 3, 4, 5, 6];
+            const arrNewFil = arrFil.filter(num => num % 2 === 0);
+            console.log(arrNewFil);
+        </script>
+    </body>
+</html>
