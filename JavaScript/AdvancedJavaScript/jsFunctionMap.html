@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Fuction Map </title>
+    </head>
+    <body>
+        <h2>JS Map function</h2>
+        <script>
+            //Map
+            let arrCustom = [2, 3, 4, 5, 6];
+            console.log(arrCustom);
+            let newArr = arrCustom.map(val => val * 3);
+            console.log(newArr);
+
+            let arrData = [
+                {id: 1, name: "Deepak", age: 25},
+                {id: 2, name: "Deepak2", age: 35},
+                {id: 3, name: "Deepak3", age: 16},
+                {id: 4, name: "Deepak4", age: 24},
+                {id: 5, name: "Deepak5", age: 34},
+            ];
+            let newData = arrData.map(val => val.name);
+            console.log(arrData);
+            console.log(newData);
+        </script>
+    </body>
+</html>

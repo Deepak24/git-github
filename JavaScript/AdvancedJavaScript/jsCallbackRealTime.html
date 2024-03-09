@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+        <title>JS nested Callback</title>
+    </head>
+    <body>
+        <h2>JavaScript Nested Callback</h2>
+        <script>
+            //Nested JS callback example
+            function getUser(uid, callback) {
+                console.log("Get user from database");
+                setTimeout(()=>{
+                    callback({
+                        userId : uid,
+                        userName : "John"
+                    });
+                }, 2000);
+            }
+
+            function getServices(users, callback){
+                console.log("Get services of the user.");
+                setTimeout(()=>{
+                    callback(["A", "B", "C", "D"]);
+                }, 3000);
+            }
+
+            function getserviceCost(services, callback){
+                console.log("Find cost of callback")
+                setTimeout(()=>{
+                    callback(services.length * 400);
+                }, 2000);
+            }
+
+            //Call nested callback
+            getUser(101, (users) => {
+                getServices(users, (services) => {
+                    getserviceCost(services, (cost) => {
+                        console.log("The service cost is " +cost);
+                    });
+                })
+            });
+        </script>
+    </body>
+</html>

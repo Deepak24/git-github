@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Async Await Example</title>
+    </head>
+    <body>
+        <script>
+        function getUser(uid) {
+            return new Promise((resolve, reject) => {
+                console.log("get user from database");
+                setTimeout(() => {
+                    resolve({ userId: uid, userName: "john" })
+                }, 2000);
+            });
+        }
+        function getservices(users) {
+            return new Promise((resolve, reject) => {
+                console.log("get services of the user")
+                setTimeout(() => {
+                    resolve(["A", "B", "C", "D"])
+                }, 3000);
+            });
+
+        }
+        function getservicecost(services) {
+            return new Promise((resolve, reject) => {
+                console.log("Find cost of the service")
+                setTimeout(() => {
+                    resolve(services.length * 400);
+                }, 4000);
+            });
+
+        }
+        //async await
+        async function result(){
+            try{
+                let users = await getUser(101);
+                let services = await getservices(users);
+                let cost = await getservicecost(services);
+                console.log(`The cost of services is ${cost}`)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        result();
+        </script>
+    </body>
+</html>

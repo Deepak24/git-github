@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Callback Example</title>
+    </head>
+    <body>
+        <h2>
+            Callback examples
+        </h2>
+        <script>
+            let greeting=(name) => {
+                alert("Name is " + name);
+            }
+            let myFunction=(callback) => {
+                let userName = prompt("Enter Username");
+                setTimeout(()=>{
+                    callback(userName);
+                }, 3000);
+            }
+            myFunction(greeting);
+        </script>
+    </body>
+</html>
