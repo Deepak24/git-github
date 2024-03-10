@@ -5,3 +5,5 @@
 #We are excluding the sass and map files
 /assets/sass/*.sass
 /assets/sass/*.map
+/node_modules
+package-lock.json
