@@ -34,3 +34,4 @@ do{
     console.log(iDo);
     iDo++;
 }while(iDo <=10);
+
