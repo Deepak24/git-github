@@ -35,10 +35,11 @@ console.log("" || 0 || 2);
 console.log("" || 0 || undefined);
 console.log("" || "null" || 2);
 
-console.log(3 && 2 && 1);
-console.log(0 && "" && 2);
-console.log("undefined" && "null" && "");
+console.log(3 && 2 && 4);//Output is - 4
+console.log(0 && "" && 2);//Output is - 0
+console.log("undefined" && "null" && "");//Output is -
 
+//Random Example
 let sum = 0;
 let n = 100;
 
