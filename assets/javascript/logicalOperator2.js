@@ -38,3 +38,12 @@ console.log("" || "null" || 2);
 console.log(3 && 2 && 1);
 console.log(0 && "" && 2);
 console.log("undefined" && "null" && "");
+
+let sum = 0;
+let n = 100;
+
+for(let i =0; i<= 100; i++){
+    sum +=i;
+}
+
+console.log('sum', sum);
