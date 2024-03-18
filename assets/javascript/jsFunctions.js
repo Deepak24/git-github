@@ -43,3 +43,9 @@ var arrowFunc = () => {
 
 //call the arrow function
 arrowFunc();
+
+function greet(name) {
+    console.log('${name}, Welcome to HERE!');
+}
+
+greet(Geek);
