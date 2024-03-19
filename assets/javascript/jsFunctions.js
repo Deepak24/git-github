@@ -49,3 +49,10 @@ function greet(name) {
 }
 
 greet(Geek);
+
+function greet1(name1){
+    return "Hello, " + (name1 || "Stranger") + "!";
+}
+
+console.log(greet1("Geeker"));
+console.log(greet1());
