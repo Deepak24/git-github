@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM 1</title>
-</head>
-<body>
-    <h2>DOM example 1</h2>
-    <p id="target">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    </p>
-    <button id="rd">Read Dara </button>
-    <button id="ud" >Update Data</button>
-    <script>
-        var rd = document.getElementById("rd");
-        var ud = document.getElementById("ud");
-        var target = document.getElementById("target");
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM 1</title>
+    </head>
+    <body>
+        <h2>DOM example 1</h2>
+        <p id="target">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        <button id="rd">Read Dara </button>
+        <button id="ud" >Update Data</button>
+        <script>
+            var rd = document.getElementById("rd");
+            var ud = document.getElementById("ud");
+            var target = document.getElementById("target");
 
-        //Read Data 
-        rd.addEventListener("click", function(){
-            // alert("we are in read");
-            var data = target.innerHTML;
-            alert(data);
-        });
-        //Update data
-        ud.addEventListener("click", function(){
-            alert("We are in update");
-            target.innerHTML = "Hi we are in update";
-            target.style.color = "red";
-            target.style.backgroundColor = "blue";
-        });
-    </script>
-</body>
+            //Read Data 
+            rd.addEventListener("click", function(){
+                // alert("we are in read");
+                var data = target.innerHTML;
+                alert(data);
+            });
+            //Update data
+            ud.addEventListener("click", function(){
+                alert("We are in update");
+                target.innerHTML = "Hi we are in update";
+                target.style.color = "red";
+                target.style.backgroundColor = "blue";
+            });
+        </script>
+    </body>
 </html>

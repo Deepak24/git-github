@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Manipulation with set attribute</title>
+    </head>
+    <body>
+        <h1>DOM Manipulation with setAttribute method..</h1>
+        <div class="container">
+            <div id="myId" class="myDivClass" data-value="10">
+                This is my div class!
+            </div>
+        </div>
+
+        <script>
+            const myDiv = document.querySelector("#myId");
+
+            //Modify the attribute
+            myDiv.setAttribute("id", "myNewId");
+            myDiv.setAttribute("class", "myNewClass");
+            myDiv.setAttribute("data-value", "30");
+
+            //Modify the Properties
+            myDiv.textContent = "Good Bye World!!";
+            myDiv.id = "myNewerId";
+            myDiv.className = "myNewerClass";
+            myDiv.dataset.value = "20";
+        </script>
+    </body>
+</html>

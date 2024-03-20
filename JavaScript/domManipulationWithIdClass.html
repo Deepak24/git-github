@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Manipulation with Id Class</title>
+    </head>
+    <body>
+        <h2>Dom Manipulation with Id, Class, Query Selector</h2>
+        <div class="container">
+            <div id="customId" class="manipulationWithId">
+                This is Div element with Id <b>customId</b>
+            </div>
+
+            <div class="">
+                <h3>This is div Element with class name <strong>manipulationWithId</strong></h3>
+                <p class="manipulationWithClass">This is paragraph element </p>
+                <p class="manipulationWithClass">This is another paragraph </p>
+            </div>
+            
+            <div class="divContainer">
+                <p>This is paragraph element inside the Div!</p>
+            </div>
+
+            <div class="querySeleDiv">
+                <p>This is paragraph Element inside the div</p>
+                <p>This is paragraph Element inside the div</p>
+            </div>
+        </div>
+        <script>
+            //Manipulation with id
+            const divId = document.getElementById("customId");
+            divId.innerHTML = "Div content has been changed!";
+            
+            //Manipulation with class
+            const divClass = document.getElementsByClassName("manipulationWithClass");
+            for( let i=0; i < divClass.length; i++) {
+                divClass[i].innerHTML = "This paragraph content has been changed!";
+            }
+
+            //Manipulation with querySelector
+            const divContainer = document.querySelector(".divContainer");
+            divContainer.style.backgroundColor = "blue";
+
+
+            //Manipulation with querySelectorAll
+            const divQuerySel = document.querySelectorAll(".querySeleDiv p");
+            for(let qCount = 0; qCount < divQuerySel.length; qCount++){
+                divQuerySel[qCount].innerHTML = "Paragraph content is changed with querySelectorAll.";
+            }
+        </script>
+    </body>
+</html>
