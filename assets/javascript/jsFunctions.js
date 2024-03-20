@@ -44,11 +44,11 @@ var arrowFunc = () => {
 //call the arrow function
 arrowFunc();
 
-function greet(name) {
+function greetName(name) {
     console.log('${name}, Welcome to HERE!');
 }
 
-greet(Geek);
+greetName("Geek");
 
 function greet1(name1){
     return "Hello, " + (name1 || "Stranger") + "!";

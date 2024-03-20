@@ -10,12 +10,12 @@ console.log(firstName || lastName || null);
 
 
 //Logical operator values
-console.log("Boolean value", Boolean(""));
-console.log("Boolean space", Boolean(" "));
-console.log("Boolean zero", Boolean(0));
-console.log("Boolean true", Boolean(true));
-console.log("Boolean null", Boolean(null));
-console.log("Boolean undefined", Boolean(undefined));
+console.log("Boolean value", Boolean("")); // Output - false
+console.log("Boolean space", Boolean(" ")); // Output - true
+console.log("Boolean zero", Boolean(0)); // Output - false
+console.log("Boolean true", Boolean(true)); // Output - true
+console.log("Boolean null", Boolean(null)); // Output - false
+console.log("Boolean undefined", Boolean(undefined)); // Output - false
 
 let a = 12;
 let b;
@@ -37,7 +37,7 @@ console.log("" || "null" || 2);
 
 console.log(3 && 2 && 4);//Output is - 4
 console.log(0 && "" && 2);//Output is - 0
-console.log("undefined" && "null" && "");//Output is -
+console.log("undefined" && "null" && "");//Output is - blank
 
 //Random Example
 let sum = 0;
@@ -47,4 +47,4 @@ for(let i =0; i<= 100; i++){
     sum +=i;
 }
 
-console.log('sum', sum);
+console.log('sum', sum); //Output - 5050
