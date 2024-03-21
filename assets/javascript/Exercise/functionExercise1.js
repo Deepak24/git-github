@@ -30,6 +30,7 @@ console.log(str.slice(-5));
 console.log(str.substring(-5));
 console.log(str.substr(-5));
 
+//This is from exercise program
 function createCounter(){
     let count = 0;
     return function() {
