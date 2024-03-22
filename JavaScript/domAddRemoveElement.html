@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Add Remove Element</title>
+    </head>
+    <body>
+        <div class="addContainer">
+            <h2>We are checking DOM manipulation by adding element!</h2>
+            <div class="innerDiv"></div>
+        </div>
+
+        <h2>We are checking the remove Child element from DOM</h2>
+        <div class="removeElement">
+            <p>This is p tag</p>
+            <p>This is another p tag</p>
+            <p>This is another p tag</p>
+            <p>This is another p tag</p>
+        </div>
+
+        <script>
+            const getDiv = document.querySelector(".innerDiv");
+            const ptag = document.createElement("p");
+            ptag.textContent = "This is new Paragraph tag";
+            getDiv.appendChild(ptag);
+
+            //Remove child elements
+            const divRemove = document.querySelector(".removeElement");
+
+            while(divRemove.firstChild) {
+                divRemove.removeChild(divRemove.firstChild);
+            }
+        </script>
+    </body>
+</html>

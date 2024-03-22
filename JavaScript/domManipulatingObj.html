@@ -42,8 +42,8 @@
 
         console.log(person1);
 
+        //Manipulating the object
         person1.hobbies = ["reading", "writing"];
-
         console.log(person1);
 
         //Deletion
@@ -58,13 +58,13 @@
                 hobbies: ['reading', 'swimming', 'traveling']
             };
             
-            console.log("Before deletion", person2);
-            delete person2.address;
+        console.log("Before deletion", person2);
+        delete person2.address;
 
-            console.log(person2);
+        console.log(person2);
 
-            //Looping
-            const person3 = {
+        //Looping
+        const person3 = {
                 name : "Deepak",
                 lName : "Khamkar",
                 age : 35,
@@ -74,15 +74,15 @@
                 },
                 hobbies : ["Reading", "Writing", "Exercise"]
             }
-            console.log(person3);
-            for (let key in person3) {
-                console.log(`Key is ${key} : value is ${person3[key]}`);
-            }
+        console.log(person3);
+        for (let key in person3) {
+            console.log(`Key is ${key} : value is ${person3[key]}`);
+        }
 
-            console.log(person3.address);
-            person3.hobbies.forEach(hobby => {
-                console.log(hobby);
-            });
+        console.log(person3.address);
+        person3.hobbies.forEach(hobby => {
+            console.log(hobby);
+        });
         </script>
     </body>
 </html>

@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Attibute Example</title>
-</head>
-<body>
-    <h2>DOM Attribute Example   </h2>
-    <img src="" alt="DOM attribute example" />
-    <script>
-        var imageField = document.getElementById("imgId");
-        //Mouse hover 
-        imageField.addEventListener("mouseover", function(){
-            imageField.setAttribute("src", "");
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Attibute Example</title>
+    </head>
+    <body>
+        <h2>DOM Attribute Example   </h2>
+        <img src="" alt="DOM attribute example" />
+        <script>
+            var imageField = document.getElementById("imgId");
+            //Mouse hover 
+            imageField.addEventListener("mouseover", function(){
+                imageField.setAttribute("src", "");
 
-        });
+            });
 
-        //Mouse Out attribute
-        imageField.addEventListener("mouseout", function(){
-            imageField.setAttribute("src", "");
-            
-        });
-    </script>
-    
-</body>
+            //Mouse Out attribute
+            imageField.addEventListener("mouseout", function(){
+                imageField.setAttribute("src", "");
+                
+            });
+        </script>
+        
+    </body>
 </html>
