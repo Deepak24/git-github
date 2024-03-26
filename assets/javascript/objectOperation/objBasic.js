@@ -30,8 +30,12 @@ const person = {
 };
 
 person.sayHello();
+person.function1 = () => {
+    console.log("We are inside arrow function of a person object");
+}
 
 //If we would like to access the object with square bracket then we need to give quotation to key
 console.log("The Person object's Name propery is ", person["perName"]);
 console.log(person);
 person.bye();//call the function using object
+person.function1();//call the object's function 
