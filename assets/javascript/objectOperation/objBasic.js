@@ -1,6 +1,7 @@
 /**
  * Description: JS object basic example
- *              Object - key - value pair
+ *              - Object - key - value pair
+ *              - Functions inside the object
  */
 
 const obj = {};
@@ -22,7 +23,15 @@ const person = {
     age : 35,
     sayHello : function() {
         console.log("Hello My Name is ", this.perName);
+    },
+    bye(){
+        console.log("Bye Bye!");
     }
 };
 
 person.sayHello();
+
+//If we would like to access the object with square bracket then we need to give quotation to key
+console.log("The Person object's Name propery is ", person["perName"]);
+console.log(person);
+person.bye();//call the function using object
