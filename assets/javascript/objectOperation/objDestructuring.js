@@ -31,6 +31,13 @@ console.log(typeof userName);
 console.log(rest);
 
 
+//Object destructuring with default value
+console.log("Object destructuring using default values.");
+const {a = 1, b = 2} = {a: 5};  
+  
+console.log(a);   
+console.log(b);
+
 //Destructuring with object
 const employees = {
     engineers: {
