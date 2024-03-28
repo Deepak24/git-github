@@ -1,5 +1,6 @@
 /**
  * Description : array spread - We are checking the example of spread operator on array
+ *              spread operator can be used anywhere not specific to end 
  */
 
 //Array Spread operator
@@ -10,7 +11,7 @@ const arr3 = [...arr1, 6, 7, ...arr2, 10];
 
 console.log(arr3);
 const arr4 = [...arr1, ...arr2];
-console.log(arr4);
+console.log(arr4); // [ 1, 2, 3, 4, 5, 8, 9 ]
 
 // with spread 
 let arr = [1,2,3,-1];
@@ -38,4 +39,5 @@ const user2 = {
     city : "Pune"
 }
 const newUser = {...user1, ...user2};
+console.log("the concatenate result is ");
 console.log(newUser);
