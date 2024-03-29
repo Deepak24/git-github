@@ -1,5 +1,8 @@
 /**
  * Description: REST Parameters - ...rest/...args
+ *              The most important Point to remember about the rest parameter is that 
+ *              it should always be used as the last parameter of the function 
+ *              otherwise there will be a syntax error.
  */
 
 function calculateTotal(a, b, ...rest){

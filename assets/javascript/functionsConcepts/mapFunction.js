@@ -1,5 +1,6 @@
 /**
  * Description : Map function
+ *              - It applies a given function on all elements of the array and returns updated array
  */
 
 const arr = [1,2,3,4,5,6];
@@ -7,6 +8,7 @@ function getSquares(number1) {
     return number1 ** 2;
 }
 
+//applies getSquare custom methods
 const output = arr.map(getSquares);
 console.log(output);
 

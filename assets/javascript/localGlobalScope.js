@@ -1,6 +1,9 @@
 /**
  * Description: Global and local variables
  *              Global, local and block Scope
+ * 
+ *              Global Scope - visibility all over the javascript Code 
+ *              Block Scope  - visibility only inside a piece of code generally wrapped by curly braces 
  */
 
 var x = 3;//Global variable
@@ -36,6 +39,7 @@ console.log("With var variable");
 console.log(a1);
 console.log(b1);
 
+//Variable declared with let and const always have block Scope. 
 {
     const ab = 10;
     console.log("Const variable in block ", ab);
