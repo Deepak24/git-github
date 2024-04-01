@@ -5,3 +5,10 @@
     background-color: red;
     color: white;
 }
+
+body {
+    background-color:beige;
+}
+#form, #div, #para {
+    border: 1px solid #000cba;
+}
