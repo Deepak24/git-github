@@ -11,10 +11,40 @@
 let startBtn = document.querySelector(".start");
 console.log(startBtn);
 
-let stopBtn = document.querySelector("#btnReset");
+let stopBtn = document.querySelector("#btnStop");
 console.log(stopBtn);
 
+let countBtn = document.querySelector(".count");
+let countVal = 0;
 //With querySelectorAll
 
-let getBtn = document.querySelectorAll(".button");
-console.log(getBtn);
+let getAllBtn = document.querySelectorAll(".button");
+console.log(getAllBtn);
+
+//Event Listener with above variables
+function showMessage() {
+    console.log("Button clicked");
+}
+
+// startBtn.addEventListener("click", showMessage);
+startBtn.addEventListener("click", () => {
+    console.log("Button Clicked with arrow function");
+    if ( startBtn.innerText == "Start") {
+        startBtn.innerText = "Clicked";
+        startBtn.innerHTML = "<span>Lets begin</span>";
+    } else {
+        startBtn.innerText = "Start";
+    }
+});
+
+// change count on click of Increased count button
+countBtn.addEventListener("click", () => {
+    countVal++;
+    console.log(countVal);
+});
+
+stopBtn.addEventListener("click", () => {
+    console.log("Event Listener ");
+    // stopBtn.classList.add("btnRed");
+    stopBtn.classList.toggle("btnRed");
+});
