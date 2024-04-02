@@ -3,9 +3,9 @@
  */
 let btnContainer = document.querySelector("#btnContainer");
 
+//Event Delegation
 btnContainer.addEventListener("click", (event) => {
     let btnText = event.target.innerText;
-    console.log("Btn text object", btnText);
     if( btnText === "Red" ) {
         event.target.classList.toggle("btnRed");
     }

@@ -48,3 +48,13 @@ stopBtn.addEventListener("click", () => {
     // stopBtn.classList.add("btnRed");
     stopBtn.classList.toggle("btnRed");
 });
+
+//Create new function to change background and text color
+function myFunction() {
+    var x = document.getElementById("pId").querySelectorAll("p");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "green";
+        x[i].style.color = "white";
+    }
+}
