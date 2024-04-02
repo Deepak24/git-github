@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Prototype</title>
+    </head>
+    <body>
+        <h2>We are checking the JS prototype!</h2>
+        <h3>
+            Description: 
+                Prototype - Every JS object is having special property called as prototype
+                        Which value is either null or reference to other object
+        </h3>
+    </body>
+    <script >
+
+        const loggedInStatus = {
+            isLoggedIn : false,
+        };
+
+        const admin = {
+            isAdmin : true,
+            __proto__ : loggedInStatus,
+            showMessage : function () {
+                console.loh(this.isAdmin);
+            }
+        };
+
+        const user = {
+            name : "Deepak",
+            age : 45,
+            __proto__ : admin
+
+        };
+
+        console.log(user);
+        console.log(Object.keys(user));
+    </script>
+</html>
