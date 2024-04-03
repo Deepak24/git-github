@@ -11,4 +11,13 @@
 const URL = "https://03ebffcbbfd840119aa1798e0ce9f6ab.api.mockbin.io/";
 
 let promise = fetch(URL);
-console.log(promise);
+
+//Method chaining
+promise.then(function(response) {
+    return response.json();
+}).then(function(data){
+    console.log(data)
+}).catch(function(){
+    console.log("Error Occured");
+});
+// console.log(promise);
