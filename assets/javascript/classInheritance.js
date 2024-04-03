@@ -1,5 +1,6 @@
 /**
  * Description: Class Inheritance
+ *              Inheritance refers to ability of child class to inherit properties and methods of parent class in child class
  */
 //Parent class
 class Laptop {

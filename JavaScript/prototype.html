@@ -36,5 +36,24 @@
 
         console.log(user);
         console.log(Object.keys(user));
+
+        let person = {
+            strtName : "Alece",
+            age : 30,
+            greet() {
+                console.log(`Hello, my name is ${this.strName} and I'm ${this.age} years old.`);
+            }
+        };
+
+        let employee = {
+            salary : 50000
+        };
+
+        employee.__proto__ = person;
+        console.log(employee.salary);
+        employee.greet();
+        console.log(employee.hasOwnProperty('salary'));
+        console.log(employee.hasOwnProperty('strName'));
+
     </script>
 </html>
