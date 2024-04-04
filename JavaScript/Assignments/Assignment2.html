@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 - Reverse the input string</title>
+        <title>Page Title</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h2>Assignment 2 - Reverse the input string</h2>
+                <p>Create an input field and take string input in it from the user. 
+                    Render the input value on the viewport. Create a button 
+                    and on click of the button reverse the input and display it on the view.</p>
+            </div>
+            <div class="inputDiv">
+                <input type="text" id="userName" name="userName" value="" />
+                <button id="getText" >Display Text</button>
+                <div id="inputText"></div>
+            </div> 
+            <div class="outputDiv">
+                <br/><br/>
+                <button id="reverseText" >Reverse String</button>
+                <div class="outputText"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var inputText = document.getElementById("userName");
+        var textBtn = document.querySelector("#getText");
+        var inputDiv = document.getElementById("inputText");
+        console.log(inputDiv);
+        var inputTextVal = inputText.value;
+        console.log(inputTextVal);
+        textBtn.addEventListener("click", function(){
+           inputDiv.innerHTML = inputTextVal;
+        });
+
+        var reverseTextBtn = document.getElementById("reverseText");
+        var outPutDiv = document.getElementsByClassName(".outputText");
+        reverseTextBtn.addEventListener("click", function(){
+            // let reverseString = inputTextVal.reverse();
+            console.log("hello");
+            // outPutDiv.innerText = reverseString;
+        });
+         
+    </script>
+
+</html>
