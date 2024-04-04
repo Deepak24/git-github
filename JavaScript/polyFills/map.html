@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyfills - Own version of functionality </title>
+    </head>
+    <body>
+        <h2>A polyfill is piece of javascript code used to provide modern functionality 
+            on older browser that do not support it.</h2>
+    </body>
+    <script>
+        const arrNum = [1, 2, 3, 4, 5];
+        //Using ini built map function
+        const squareArr = arrNum.map((number) => number ** 2);
+        console.log(squareArr);
+
+
+        //Using the for loop
+        let arrTemp = [];
+        for (let i=0; i < arrNum.length; i++){
+            arrTemp.push(arrNum[i] ** 2);
+        }
+        console.log("Using For loop");
+        console.log(arrTemp);
+
+        function getSquareOfNumber(number1) {
+            return number1 ** 2;
+        }
+
+        //polyfill
+        Array.prototype.myMap = function(callback) {
+            let arrTemp = [];
+            for(let i =0; i < this.length; i++){
+                let power = this[i] ** 2;
+                arrTemp.push(callback(this[i]));
+            }
+            return arrTemp;
+        };
+
+        const arrSquare = arrNum.myMap(getSquareOfNumber);
+        console.log(arrSquare);
+    </script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyfills - Own version of functionality</title>
+    </head>
+    <body>
+        <h1>Polyfill filter</h1>
+        <h2>A polyfill is piece of javascript code used to provide modern functionality 
+            on older browser that do not support it.</h2>
+    </body>
+    <script>
+        const arrNum = [1, 2, 3, 4, 5];
+
+        function getFilteredArr(number1) {
+            return number1 > 3;
+        }
+
+        const result = arrNum.filter(getFilteredArr);
+
+        console.log(result);
+
+        //Using the for loop
+        let arrTemp = [];
+        for( let i=0; i < arrNum.length; i++) {
+            if(arrNum[i] > 3) {
+                arrTemp.push(arrNum[i]);
+            }
+        }
+
+        console.log(arrTemp);
+
+        //polyfilll
+        Array.prototype.myFilter = function(callback) {
+            let arrTemp = [];
+            for(let i=0; i< this.length; i++){
+                if(callback(this[i])) {
+                    arrTemp.push(arrNum[i]);
+                }
+            }
+            return arrTemp;
+        }
+
+        const result1 = arrNum.myFilter(getFilteredArr);
+        console.log(result1);
+    </script>
+</html>
