@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyfill - For Call and Apply</title>
+    </head>
+    <body>
+        <h1>Polyfill for call & apply</h1>
+        <h2>Polyfill for call and apply .</h2>
+    </body>
+    
+    <script>
+        const obj = {
+            userName : "Deepak",
+            city : "Pune"
+        }
+
+        function displayUserInfo(state) {
+            console.log(`Hi I am ${this.userName} from ${this.city}, ${state}`);
+        }
+
+        /**
+         * Polyfill for call 
+         * */
+
+        Function.prototype.myCall = function (context, ...args) {//Collecting the object with ...rest parameter
+            context.showMessage = this;
+            context.showMessage(...args);//Over here we are spreading the arguments with ...args
+        }
+
+        //polyfill for apply
+        Function.prototype.myApply = function (context, args) {
+            context.showMessage = this;
+            context.showMessage(...args);
+            delete context.showMessage;
+        }
+
+        //Difference is that in apply we are passing array of args instead of rest parameter
+
+        //Add checkcases for call and apply as a assignment 
+
+        // displayUserInfo.myCall(obj, "Maharashtra");
+        displayUserInfo.myApply(obj, ["Maharashtra"]);
+    </script>
+</html>

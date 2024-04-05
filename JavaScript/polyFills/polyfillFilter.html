@@ -11,7 +11,8 @@
             on older browser that do not support it.</h2>
     </body>
     <script>
-        const arrNum = [1, 2, 3, 4, 5];
+        //Take arr
+        const arrNum = [1, 2, 3, 4, 5, 6];
 
         function getFilteredArr(number1) {
             return number1 > 3;
@@ -31,7 +32,7 @@
 
         console.log(arrTemp);
 
-        //polyfilll
+        //polyfill
         Array.prototype.myFilter = function(callback) {
             let arrTemp = [];
             for(let i=0; i< this.length; i++){

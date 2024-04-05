@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyfill - Flatten array</title>
+    </head>
+    <body>
+        <h1>Polyfill Flatten</h1>
+        <h2>Flatten array means without any sub array or without nested array.</h2>
+    </body>
+    <script>
+        //Flatten array
+        const arr = [1, 2, 3, 4, [5, 6], [7, 8]]; //Output would be - [1, 2, 3, 4, 5, 6, 7, 8]
+
+        const result = arr.flat();
+        console.log(result);
+
+        //Polyfill for faltten array
+        Array.prototype.myFlat = function( depth = 1){
+            let arrTemp = [];
+            function getFlattenedArr(array, depth){
+                for(element of array){
+                    if(Array.isArray(element) && depth ){//Use recursive function for checking array or not
+                        getFlattenedArr(element, depth - 1);
+                    }else {
+                        arrTemp.push(element);
+                    }
+                }
+            }
+            getFlattenedArr(this, depth);
+            return arrTemp;
+        }
+
+        const arrFlatten = arr.myFlat(2);
+        console.log(arrFlatten);
+
+        //Just try with different polyfills
+
+    </script>
+</html>
