@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyfills - reduce - Own version of functionality</title>
+    </head>
+    <body>
+        <h1>Polyfill Reduce</h1>
+        <h2>A polyfill is piece of javascript code used to provide modern functionality 
+            on older browser that do not support it.</h2>
+    </body>
+    <script>
+        //polyfill for reduce
+        const arrRed = [1, 2, 3, 4, 5, 6];
+
+        function getSum(acc, cur) {
+            return acc + cur;
+        }
+        
+        //Reduce polyfill
+        Array.prototype.myReduce = function (callback, intialVal) {
+            let acc =  intialVal ? intialVal : this[0];
+            for( let i = intialVal ? 0 : 1; i < this.length; i++  ) {
+                acc = callback.call(this, acc, this[i], i, this);                
+            }
+            return acc;
+        }       
+
+        const total = arrRed.reduce(getSum, 8);
+        console.log(total);
+
+        const customTotal = arrRed.myReduce(getSum, 8);
+        console.log(customTotal);
+    </script>
+        
+    </body>
+</html>
