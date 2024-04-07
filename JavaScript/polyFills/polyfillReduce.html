@@ -18,6 +18,7 @@
             return acc + cur;
         }
         
+        //Reduce polyfill
         Array.prototype.myReduce = function (callback, intialVal) {
             let acc =  intialVal ? intialVal : this[0];
             for( let i = intialVal ? 0 : 1; i < this.length; i++  ) {
