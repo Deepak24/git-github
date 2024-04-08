@@ -13,8 +13,8 @@ const user1 = {
     showName: displayMessage
 }
 
-console.log(user1);
-user1.showName();
+console.log(user1);//{ userName: 'Deepak', age: 35, showName: [Function: displayMessage] }
+user1.showName();//{ userName: 'Deepak', age: 35, showName: [Function: displayMessage] }
 
 //Example2
 
@@ -39,14 +39,14 @@ const displayMessage3 = () => {
 const user3 = {
     userName : "Deepak3"
 }
-displayMessage3.apply(user3);
+displayMessage3.apply(user3);//{}
 
 //Exercise 4
 function User() {
     console.log(this);
 }
 
-const user4 = new User();
+const user4 = new User();//User {}
 
 //Exercise 5
 const person = {
@@ -56,7 +56,7 @@ const person = {
     },
 };
 
-person.sayHi();
+person.sayHi();//Output - Welcome Deepak
 
 //Exercise 6
 const person2 = {
@@ -67,4 +67,4 @@ const person2 = {
 };
 
 let person3 = person2.sayHi;
-person3();
+person3();//Output - Welcome undefined
