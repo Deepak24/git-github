@@ -33,14 +33,12 @@ hotel
 .then((hotelId) => {
     console.log({ hotelId })
     return hotelId;
-})
+})//1
 .catch(err=> console.log(err) )
 .then(function (hotelId){
     return payment(hotelId);
-})
-
-//Printing logs
+})//2
 .catch((err) => console.log(err))
-.then((response) => console.log(response))
+.then((response) => console.log(response))//3
 .catch((error) => console.log(error.message));
 

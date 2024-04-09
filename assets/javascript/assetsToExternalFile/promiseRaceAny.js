@@ -1,5 +1,12 @@
 /**
- * Description: Promise race
+ * Description: Promise race/any
+ *              Race - Instead of waiting for all promises to settle, 
+ *                     it only waits for the first one to settle and retrieves its result or error.
+ * 
+ *              Any - The method will return the first promise that finishes successfully. 
+ *                    It executes until the first promise become successful. 
+ *                    And as soon as get result then other promises will stop executing.
+ * 
  */
 let promise1 = new Promise((resolve) => {
     setTimeout(() => resolve("Promise 1 is resolved"), 3000);

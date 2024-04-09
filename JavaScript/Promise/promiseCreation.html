@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Promise creation</title>
+    </head>
+    <body>
+        <h2>We are checking JS promise</h2>
+    </body>
+    <script>
+        const isRequestSuccessful = false;
+        const db = [
+            { id : 1,
+              userName : "Deepak"
+            },
+            {
+                id : 2,
+                userName : "Prakash"
+            }
+        ];
+
+        //Create promise and check whether it's resolve or rejecteds
+        let promise = new Promise((resolve, reject) => {
+            if(isRequestSuccessful) {
+                // resolve("Promise Resolved");
+                setTimeout(() => resolve(db), 3000);
+            }else {
+                const error = new Error("Something went wrong");
+                reject(error);
+            }
+        });
+        console.log(promise);
+
+        promise
+            .then((response) => console.log(response))
+            .catch(function(err) {
+                console.log(err);
+            });
+
+    </script>
+</html>
