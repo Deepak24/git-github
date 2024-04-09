@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Async Await</title>
+    </head>
+    <body>
+        <h3>Exercise on Async Await </h3>
+
+    </body>
+    <script>
+        //Async function always return promise
+        /*async function showMessage(){
+            let promise = new Promise((res) => res("Done Done!!"));
+            return promise;
+        }
+
+        const promise = showMessage();
+        promise.then((res) => console.log(res));*/
+
+        async function showMessage(){
+            let promise = new Promise((res) => res("Done Done!!"));
+            let result = await promise;//Function execution stops here until the promise is settled
+            console.log(result);
+        }
+
+        showMessage();
+    </script>
+</html>
