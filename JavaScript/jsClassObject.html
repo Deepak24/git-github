@@ -6,6 +6,7 @@
         <title>JS Class Object </title>
     </head>
     <body>
+        <h2>We are checking Class Object example.</h2>
         <script>
             class Employee {
                 constroctor(name) {
@@ -22,9 +23,12 @@
             }
 
             const obj = new Employee("Deep");
-            console.log(obj.getEmployee());
+            console.log(obj.getEmployee());//undefined
             obj.setData("Deepak");
-            console.log(obj.getEmployee());
+            console.log(obj.getEmployee());//Deepak
+
+            const obj1 = new Employee();
+            console.log(obj1);//Returns empty object
         </script>
     </body>
 </html>

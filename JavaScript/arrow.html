@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Arrow Function</title>
-</head>
-<body>
-    <script>
-        const add=(a,b)=> (a+b);
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Arrow Function</title>
+    </head>
+    <body>
+        <h2>Js Arrow Function</h2>
+        <h3>Example for addition of numbers using arrow function.</h3>
+
+        <script>
+            const add=(a,b)=> (a+b);
+
+            console.log(add(2, 3));
+            console.log(add(20, 30));
+
+            let arr1 = [2, 3, 4, 5, 6, 7, 8];
+            let sum1 = 0;
+            arr1.forEach((val) => {
+                console.log(val);
+                sum1 = sum1 + val;
+            })
+
+            console.log(sum1);
+        </script>
+    </body>
 </html>

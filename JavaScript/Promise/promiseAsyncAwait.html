@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Async Await</title>
+    </head>
+    <body>
+        <h3>Exercise on Async Await </h3>
+
+    </body>
+    <script>
+        //Async function always return promise
+        /*async function showMessage(){
+            let promise = new Promise((res) => res("Done Done!!"));
+            return promise;
+        }
+
+        const promise = showMessage();
+        promise.then((res) => console.log(res));*/
+
+        const getUserData = async () => {
+            try{
+                const URL = "https://03ebffcbbfd840119aa1798e0ce9f6ab.api.mockbin.io/";
+                const promise = await fetch(URL);
+                const response = await promise.json();// Returns the json object
+                console.log(response);
+            }catch (err) {
+                console.log(err);
+            }
+        }
+
+        getUserData();
+
+        //ShowMessage for async and await
+        async function showMessage(){
+            try {
+                let promise = new Promise((res) => res("Done Done!!"));
+                let result = await promise;//Function execution stops here until the promise is settled
+                console.log(result);
+            } catch (err){
+                console.log("Error Occured", err);
+            }
+        }
+
+        showMessage();
+
+
+    </script>
+</html>

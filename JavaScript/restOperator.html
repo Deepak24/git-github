@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Rest Operator</title>
+    </head>
+    <body>
+        <h2>Rest Operator</h2>
+        <h3>Rest parameters must be pass at the end strictly.<br/>
+            Example, function numAddition(...args){}
+        </h3>
+
+    </body>
+    <script>
+        
+        function numAddition(...args){
+            let sum = 0;
+            args.forEach((val) => {
+                sum += val;
+            })
+            return sum;
+        }
+
+        console.log(numAddition(2, 3));//5
+        console.log(numAddition(2, 3, 5, 6));//16
+        console.log(numAddition(2, 3, 4));//9
+        console.log(numAddition());//0
+    </script>
+</html>
