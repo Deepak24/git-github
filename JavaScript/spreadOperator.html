@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Spread Operator</title>
+    </head>
+    <body>
+        <h3>Spread Operator</h3>
+        <script>
+            let arr1 = [3, 25, 24, 27, 9, 8];
+            let arrNew = [...arr1, 50, 60];
+            let arrNewWithMultiSpread = [...arr1, 25, 45, 55, ...arr1];
+            console.log(arrNew);// [ 3, 25, 24, 27, 9, 8, 50, 60 ]
+            console.log(arrNewWithMultiSpread);//[ 3, 25, 24, 27, 9, 8, 25, 45, 55, 3, 25, 24, 27, 9, 8 ]
+
+            //SPread with object 
+            let Obj1 = {
+                fName : "Deepak",
+                lName: "Khamkar"
+            }
+
+            let objNew = {
+                ...Obj1,
+                lName : "Joshi",
+                age : 38
+            }
+
+            console.log(objNew);
+            console.log(Obj1);
+        </script>
+        
+    </body>
+</html>
