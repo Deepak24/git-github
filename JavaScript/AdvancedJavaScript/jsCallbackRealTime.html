@@ -7,6 +7,12 @@
     </head>
     <body>
         <h2>JavaScript Nested Callback</h2>
+        <h3>Callback realtime example - 
+            When we have nested callbacks then there will be problem known as <b>callback Hell.</b>
+        </h3>
+        <h4>when a nested callback increases then it's hard to manage errors 
+            and this problem is known as callback hell (Pyramid of Doom) , 
+            to resolve it the Javascript introduces Promises in ES 6 </h4>
         <script>
             //Nested JS callback example
             function getUser(uid, callback) {
@@ -27,16 +33,16 @@
             }
 
             function getserviceCost(services, callback){
-                console.log("Find cost of callback")
+                console.log("Find cost of services.")
                 setTimeout(()=>{
                     callback(services.length * 400);
-                }, 2000);
+                }, 4000);
             }
 
             //Call nested callback
-            getUser(101, (users) => {
-                getServices(users, (services) => {
-                    getserviceCost(services, (cost) => {
+            getUser(101, (users) => {//return users in callback
+                getServices(users, (services) => {//return services in call back
+                    getserviceCost(services, (cost) => {//return cost in callback
                         console.log("The service cost is " +cost);
                     });
                 })

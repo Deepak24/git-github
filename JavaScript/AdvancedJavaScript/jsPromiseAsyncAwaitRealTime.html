@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Promise Realtime example with Async Await</title>
+    </head>
+    <body>
+        <h2>JavaScript basic promise with async await example</h2>
+    </body>
+
+    <script>
+        //Nested JS callback example
+        function getUser(uid) {
+            return new Promise((resolve, reject) => {
+                console.log("Get user from database");
+                setTimeout(()=>{
+                    resolve({
+                        userId : uid,
+                        userName : "John"
+                    });
+                }, 2000);
+            });            
+        }
+
+        function getServices(users){
+            return new Promise((resolve, reject) => {
+                console.log("Get services of the user.");
+                setTimeout(()=>{
+                    resolve(["A", "B", "C", "D"]);
+                }, 3000);
+            });
+        }
+
+        function getserviceCost(services){
+            return new Promise((resolve, reject) => {
+                console.log("Find cost of services.")
+                setTimeout(()=>{
+                    resolve(services.length * 400);
+                }, 4000);
+            });            
+        }
+
+        //Implementation of async and await for promises
+        async function result(){
+            let users = await getUser(101);
+            let service = await getServices(users);
+            let cost = await getserviceCost(service);
+            console.log(`The cost of services id ${cost}`);
+        }
+
+        result();
+
+    </script>
+
+</html>

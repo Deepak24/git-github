@@ -10,15 +10,20 @@
             Callback examples
         </h2>
         <script>
-            let greeting=(name) => {
-                alert("Name is " + name);
+            //callback
+            let greeting = (name) => {
+                alert("Hello my name is " + name);
             }
+
+            //Callback function example
             let myFunction=(callback) => {
                 let userName = prompt("Enter Username");
                 setTimeout(()=>{
                     callback(userName);
                 }, 3000);
             }
+
+            //Passing a function as a argument to function
             myFunction(greeting);
         </script>
     </body>

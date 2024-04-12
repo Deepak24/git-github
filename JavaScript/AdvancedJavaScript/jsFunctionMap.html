@@ -7,13 +7,15 @@
     </head>
     <body>
         <h2>JS Map function</h2>
+        <h3>Map Function - When we want to perform same operation on every element of array.</h3>
         <script>
-            //Map
+            //Map on array
             let arrCustom = [2, 3, 4, 5, 6];
             console.log(arrCustom);
             let newArr = arrCustom.map(val => val * 3);
-            console.log(newArr);
+            console.log(newArr);//[6, 9, 12, 15, 18]
 
+            //Map on object
             let arrData = [
                 {id: 1, name: "Deepak", age: 25},
                 {id: 2, name: "Deepak2", age: 35},
@@ -21,6 +23,7 @@
                 {id: 4, name: "Deepak4", age: 24},
                 {id: 5, name: "Deepak5", age: 34},
             ];
+
             let newData = arrData.map(val => val.name);
             console.log(arrData);
             console.log(newData);
