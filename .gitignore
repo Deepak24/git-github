@@ -1,3 +1,10 @@
+
+# dependencies
+/ReactApplications/functioncomponent/node_modules
+/ReactApplications/functioncomponent/.pnp
+/ReactApplications/functioncomponent/.pnp.js
+
+
 /Images
 /assets/audio
 /assets/video
