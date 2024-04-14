@@ -5,23 +5,25 @@ const Mymemo = () => {
     const [number, setNumber] = useState(0);
     const [counter, setCounter] = useState(0);
     //const squareNum = numberSquare(number);//without memorization
-    const squareNum = useMemo(() => 
-    {
+
+    //Arrow function to call numberSquare method
+    const squareNum = useMemo(() => {
         return numberSquare(number);//find square()
     }, [number]);
     
-
+    //Arrow function to setNumber with handler
     const handler = (event) => {
         setNumber(event.target.value);
     }
     
+    //Arrow function to setCounter to increment
     const Increment = () => {
         setCounter(counter+1);
     }
 
     return(
         <>
-            <h2>useMemo inbuild hook </h2>
+            <h2 className="heading text-center">useMemo real time example </h2>
             <input type="text" placeholder="Enter Number" onChange={handler} />
             <div>
                 <p>Square of Number {number} : {squareNum}</p>
