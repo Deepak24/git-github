@@ -12,7 +12,7 @@ const About = ({data}) => {
         <>
             <h2>About Page</h2>
             <h2>Elapsed Seconds {seconds }</h2>
-            <p>The name is {data.userName} and I am {data.age} years old.</p>
+            {/* <p>The name is {data.userName} and I am {data.age} years old.</p> */}
             <p></p>
         </>
     )
