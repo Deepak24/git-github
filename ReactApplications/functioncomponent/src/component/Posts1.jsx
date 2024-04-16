@@ -1,4 +1,6 @@
 import useFetchData from "../hooks/fetchDataHook1";
+
+//Function component
 const Posts = () => {
     const URL = "https://jsonplaceholder.typicode.com/posts";
     const postData = useFetchData(URL);
