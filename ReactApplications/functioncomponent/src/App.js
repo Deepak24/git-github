@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./component/Nav";
 import Notfound from "./component/Notfound";
 import Contact from "./component/Contact";
+//Importing the nested routes
 import Pune from "./component/Pune";
 import Mumbai from "./component/Mumbai";
 import Delhi from "./component/Delhi";

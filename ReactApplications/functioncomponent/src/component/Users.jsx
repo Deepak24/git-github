@@ -1,5 +1,6 @@
 import useFetchData from "../hooks/fetchDataHook1";
 
+//Function component
 const Users = () => {
     const URL = "https://jsonplaceholder.typicode.com/users";
     const userData = useFetchData(URL);

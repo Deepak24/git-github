@@ -31,8 +31,7 @@ const Nav = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-white " to="/contact">Contact</Link>
-                        </li>
-                        
+                        </li>                       
                     </ul>
                 </div>
             </div>
