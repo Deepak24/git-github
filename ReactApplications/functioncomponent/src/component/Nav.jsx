@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 
 //Design routing with Bootstrap library classes
 const Nav = () => {
+    const categories = ["Mens", "Womens", "Kids"];
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-dark ">
             <div className="container-fluid">
@@ -31,7 +32,18 @@ const Nav = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-white " to="/contact">Contact</Link>
-                        </li>                       
+                        </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Category
+                            </Link>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {categories.map((cat, ind) => 
+                                    <li><Link className="dropdown-item" to={`/products/${cat}`}>{cat}</Link></li>
+                                )}
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

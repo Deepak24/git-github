@@ -14,8 +14,11 @@ import Pune from "./component/Pune";
 import Mumbai from "./component/Mumbai";
 import Delhi from "./component/Delhi";
 
+//Import product as a category component
+import Products from "./component/Products";
+
 function App() {
-  const mydata = {userName: "Deepak", age : 25};
+  // const mydata = {userName: "Deepak", age : 25};
   return (
     <div>
           <Router>
@@ -35,6 +38,7 @@ function App() {
                             <Route path='mumbai' element={<Mumbai />} />
                             <Route path='delhi' element={<Delhi />} />
                         </Contact>} />
+                        <Route path='products/:cat' element={<Products />} />
                         <Route path='*' element={<Notfound />} />
                     </Routes>
                 </section>
