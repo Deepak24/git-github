@@ -1,6 +1,14 @@
-import { useState } from "react";
+//Implementing the query params
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Counter = () => {
+    const [searchParams, setSearchParam] = useSearchParams();//Read data with this hook
+    useEffect(() => {
+        let id = searchParams.get('id');
+
+    }, [searchParams]);
+
     //Default State
     const [count, setCount] = useState(0);
 

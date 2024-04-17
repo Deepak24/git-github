@@ -1,5 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 const Contact = () => {
+    
     return(
         <>
             <h2>Contact Page</h2>
@@ -17,7 +18,6 @@ const Contact = () => {
                     </td>
                 </tr>
             </table>
-
         </>
     )
 }

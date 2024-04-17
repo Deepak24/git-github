@@ -1,5 +1,5 @@
 //Exploring the Home component
-
+import { Link } from "react-router-dom";
 const Home = () => {//Function components
     const courses = ["Angular", "React", "Vue Js", "Node Js", "Django"];
 
@@ -11,6 +11,7 @@ const Home = () => {//Function components
                     <li key={ind}> { val } </li>
                 )}
             </ul>
+            <Link to="/counter?id=101" >Counter</Link>
         </>
     )
 }
