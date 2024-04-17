@@ -16,6 +16,7 @@ import Delhi from "./component/Delhi";
 
 //Import product as a category component
 import Products from "./component/Products";
+import Myproducts from "./component/Myproducts";
 
 function App() {
   // const mydata = {userName: "Deepak", age : 25};
@@ -32,6 +33,7 @@ function App() {
                         <Route path='counter' element={<Counter />} />
                         <Route path='users' element={<Users />} />
                         <Route path='posts' element={<Posts />} />
+                        <Route path='myproducts' element={<Myproducts />} />
                         <Route path='memo' element={<Mymemo />} />
                         <Route path='contact' element={<Contact >
                             <Route path='pune' element={<Pune />} />
