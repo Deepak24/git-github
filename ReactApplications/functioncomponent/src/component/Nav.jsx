@@ -4,7 +4,7 @@ import CartContext from "../context/CartContext";
 
 //Design routing with Bootstrap library classes
 const Nav = () => {
-    const {title, mynewcount} = useContext(CartContext);//Using useContext we can access the data in any where 
+    const {title, mynewcount, cartData} = useContext(CartContext);//Using useContext we can access the data in any where 
     const categories = ["Mens", "Womens", "Kids"];
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-dark ">
@@ -41,7 +41,7 @@ const Nav = () => {
                         </li>
                         
                         <li className="nav-item">
-                            <Link className="nav-link text-white " to="/contact">{title} -- {mynewcount}</Link>
+                            <Link className="nav-link text-white " to="/contact">Cart {cartData.length > 0 && <span>({cartData.length})</span>}</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

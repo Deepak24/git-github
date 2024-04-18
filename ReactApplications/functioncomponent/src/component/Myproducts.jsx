@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
+import CartContext from "../context/CartContext";
 
 export default function Myproducts() {
+    const {updateCart} = useContext(CartContext);
     const [proData, setProData] = useState([]);
     useEffect(() => {
         setInterval(() => {
@@ -16,7 +18,23 @@ export default function Myproducts() {
     }, []);
 
     const addCart = (id) => {
-        alert(id);
+        if( localStorage.getItem('mycart') != undefined ) {
+            let arr = JSON.parse(localStorage.getItem('mycart'));
+            if(arr.includes(id)) {
+                alert("Product already in cart");
+            }else {
+                arr.push(id);
+                localStorage.setItem("mycart", JSON.stringify(arr));
+                updateCart(arr);//Add in context
+                alert("Cart Added Successfully");
+            }
+        } else {
+            let arr = [];
+            arr.push(id);
+            localStorage.setItem("mycart", JSON.stringify(arr));
+            updateCart(arr);//Add in context
+            alert("Cart Added Successfully.");
+        }
     }
     return (
         <div>
@@ -29,7 +47,7 @@ export default function Myproducts() {
                             Price : Rs. {pro.price} <br/>
                             Quantity: {pro.quantity}
                         </p>
-                        <button className="btn btn-primary" onClick= {() => addCart=(pro.id)} >
+                        <button className="btn btn-primary" onClick={() => addCart(pro.id)} >
                             Add Cart
                         </button>
                     </div>
