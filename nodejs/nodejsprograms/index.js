@@ -7,7 +7,12 @@ const server = http.createServer((req,res) => {
     const file = fs.existsSync(path);
 
     if(req.url === "/") {
-        res.end("File handling crud Operation.");
+        if(fs.existsSync("data/deepak")) {
+            res.end("Already exist");
+        } else {
+            fs.mkdirSync("data/deepak");
+            res.end("Folder Created.");
+        }
     } else if(req.url === "/createfile") {//create file
         if(file) {
             res.end("File already exists.");
