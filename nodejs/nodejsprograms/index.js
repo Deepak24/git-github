@@ -1,36 +1,58 @@
-import http from "http"; //import http package
-const PORT = 7788; //define port
-const server = http.createServer((req, res) => {
-    // console.log(req.headers);
-    // res.end("Hello, Deepak welcome to Node server!");
+import http from 'http';
+import fs from 'fs';
+
+const PORT = 8899;
+const server = http.createServer((req,res) => {
+    const path = "data/details.txt";
+    const file = fs.existsSync(path);
+
     if(req.url === "/") {
-        res.writeHead(200, {'content-type' : 'text/html'});
-        res.write('<html> <body><h2>Home Page</h2> </body></html>');
-        res.end("Home page");
-    } else if( req.url === "/about" ) {
-        res.end("About Page");
-    } else if(req.url === "/gallery") {
-        res.end("Gallery Page.");
-    } else if(req.url === "/data") {
-        const proData = [
-            {id: 1, proName: "A", price: 125},
-            {id: 2, proName: "AA", price: 125},
-            {id: 3, proName: "B", price: 225},
-            {id: 4, proName: "CA", price: 325},
-            {id: 5, proName: "CD", price: 176},
-            {id: 6, proName: "D", price: 345},
-        ];
-        res.writeHead(200, {'content-type' : 'application/json'});
-        res.write(JSON.stringify({"proData": proData}));
-        res.end();
+        res.end("File handling crud Operation.");
+    } else if(req.url === "/createfile") {//create file
+        if(file) {
+            res.end("File already exists.");
+        }else {
+            fs.writeFile(path, "Hello creating file", (err) => {
+                if(err) throw err;
+                res.end("File Created Successfully");
+            });
+        }
+    } else if(req.url === "/readfile") {//Read file 
+        if(file) {
+            fs.readFile(path, (err,data) => {
+                if(err) throw err;
+                res.end("File Data is : " + data);
+            });
+        }else {
+            res.end("No File Found");
+        }
+    } else if(req.url === "/appendfile") {//append file
+        if(file) {
+            fs.appendFile(path, "This is appended data", (err) => {
+                if(err) throw err;
+                res.end("Data appended successfully.");
+            });
+        } else {
+            res.end("No File Found");
+        }
+    } else if(req.url === "/deletefile") {
+        if(file) {
+            let ref = fs.unlinkSync(path);
+            if(ref) {
+                res.end("File Deleted");
+            } else {
+                res.end("File not deleted");
+            }
+        } else {
+            res.end("No File Found");
+        }
     } else {
         res.end("Invalid URL");
     }
 
-})
+});
 
 server.listen(PORT, (err) => {
     if(err) throw err;
-    console.log(`Server running on port ${PORT}`);
-})
-
+    console.log(`The server work on ${PORT} number.`);
+});
