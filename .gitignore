@@ -6,6 +6,9 @@
 /ReactApplications/cartdemo/node_modules
 /ReactApplications/cartdemo/.pnp
 /ReactApplications/cartdemo/.pnp.js
+/ReactApplications/statemanagementroute/node_modules
+/ReactApplications/statemanagementroute/.pnp
+/ReactApplications/statemanagementroute/.pnp.js
 
 #Other folder/paths
 /Images
