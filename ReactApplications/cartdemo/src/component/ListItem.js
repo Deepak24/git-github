@@ -1,12 +1,16 @@
-import AddToCartIcon from "../assets/icons/shopping-cart.svg"
+//import AddToCartIcon from "../assets/icons/shopping-cart.svg";
 import {useState} from "react";//For maintaining states we need to add build in method useState
 const ListItem = ({data}) => {
 
-    const [strMessage, setMessage] = useState("Not added to the cart yet.");
+    const [counter, setCounter] = useState(0);
 
-    const handleClick = () => {
-        setMessage("Added to the cart!");
-        console.log("Clicked!", strMessage);
+    const increaseCounterByOne = () => {
+        setCounter(counter + 1);
+    }
+
+    const decreaseCounterByOne = () => {
+        if(counter <= 0 ) return;
+        setCounter( counter - 1);
     }
     
     return (
@@ -23,12 +27,16 @@ const ListItem = ({data}) => {
                 <div className={"title"}>
                     <h2>{data.title}</h2>
                 </div>
-            </div>    
-            <small className={"cart-message"}> {strMessage}</small>           
-            <button className={"cart-add"} onClick={handleClick} >
+            </div>          
+            {/* <button className={"cart-add"} onClick={handleClick} >
                 <span>Add to cart with prices</span>
                 <img src={AddToCartIcon} alt = " Cart icon" width="20" height="20" />
-            </button>
+            </button> */}
+            <div className={"cart-addon"}>
+                <button onClick={decreaseCounterByOne}><span>-</span></button>
+                <span className={"counter"}>{counter}</span>
+                <button onClick={increaseCounterByOne}><span>+</span></button>
+            </div>
         </div>
     );
 }
