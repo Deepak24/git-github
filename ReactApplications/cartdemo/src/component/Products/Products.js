@@ -1,3 +1,7 @@
+/**
+ * Desription : We can maintain states using useState hook or we can remove
+ */
+
 import React, {useState} from "react";
 import ListItem from "../ListItem";
 
@@ -9,18 +13,18 @@ const item1 = {
     thumbnail: "200x150.png"
 }
 
-const item2 = {
-    id : 2,
-    discountedPrice : 100,
-    price : 80,
-    title : "Title of the item 2",
-    thumbnail: "200x150.png"
-}
+// const item2 = {
+//     id : 2,
+//     discountedPrice : 100,
+//     price : 80,
+//     title : "Title of the item 2",
+//     thumbnail: "200x150.png"
+// }
 
 const Products = () => {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState(0);
-    const [discountPrice, setDiscountedPrice] = useState(0);
+    const [discountedPrice, setDiscountedPrice] = useState(0);
     const [thumbnail, setThumbnail] = useState('');
 
     const [item1, setItem1] = useState({
@@ -28,17 +32,16 @@ const Products = () => {
             discountedPrice : 340,
             price : 450,
             title : "Title of the item 1",
-            thumbnail: "200x150.png"      
-        
+            thumbnail: "200x150.png"
     });
 
-    const [item2, setItem2] = useState({
-        id : 2,
-        discountedPrice : 100,
-        price : 80,
-        title : "Title of the item 2",
-        thumbnail: "200x150.png"
-    });
+    // const [item2, setItem2] = useState({
+    //     id : 2,
+    //     discountedPrice : 100,
+    //     price : 80,
+    //     title : "Title of the item 2",
+    //     thumbnail: "200x150.png"
+    // });
 
     //Arrow function use to set the title
     const handleTitle = (event) => {
@@ -64,7 +67,7 @@ const Products = () => {
         setDiscountedPrice(event.target.value);
         setItem1({
             ...item1,
-            discountPrice : event.target.value
+            discountedPrice : event.target.value
         });
     }
     //Arrow function to set thumbnail
@@ -77,24 +80,19 @@ const Products = () => {
     }
 
     //Handle Form arrow function
-    const handleForm = event => {
+    const submitForm = event => {
+        event.preventDefault();
         console.log({
             title : title,
             price,
-            discountPrice,
+            discountedPrice,
             thumbnail
         });
 
-        if(discountPrice > price ) {
+        if(discountedPrice > price ) {
             alert("Discounted price can not be greater than price.");
             return;
         }
-        setItem1 = ({
-            title,
-            price,
-            discountPrice,
-            thumbnail
-        });
     }
 
     return(
@@ -106,7 +104,7 @@ const Products = () => {
 
         <div className={"product-wrapper"}>
             <div className={"form"} >
-                <form onSubmit={handleForm}>
+                <form onSubmit={submitForm}>
                     <h2>Item Card Details</h2>
                     <div className={"input-field"}>
                         <label htmlFor="title">Title</label>
@@ -114,7 +112,8 @@ const Products = () => {
                             type="text" 
                             placeholder="Enter Title" 
                             value={title}
-                            onChange={handleTitle} />
+                            onChange={handleTitle} 
+                            required />
                     </div>
                     <div className={"input-field"}>
                         <label htmlFor="title">Price</label>
@@ -122,15 +121,17 @@ const Products = () => {
                             type="text" 
                             placeholder="Enter Price" 
                             value={price}
-                            onChange={handlePrice} />
+                            onChange={handlePrice} 
+                            required />
                     </div>
                     <div className={"input-field"}>
                         <label htmlFor="title">Discounted Price</label>
                         <input 
                             type="text" 
                             placeholder="Enter Discounted Price" 
-                            value={discountPrice}
-                            onChange={handleDiscountedPrice} />
+                            value={discountedPrice}
+                            onChange={handleDiscountedPrice} 
+                            required />
                     </div>
                     <div className={"input-field"}>
                         <label htmlFor="title">Discounted Price</label>
@@ -138,7 +139,8 @@ const Products = () => {
                             type="text" 
                             placeholder="Enter Thumbnail Name" 
                             value={thumbnail}
-                            onChange={handleThumbnail} />
+                            onChange={handleThumbnail} 
+                            required/>
                     </div>
                     <div className={"submit-wrap"} >
                         <button>Update</button>
@@ -150,7 +152,7 @@ const Products = () => {
                     <div className={"product-list"}>
                         <div className={"product-list--wrapper"}>
                             <ListItem data= {item1} />
-                            <ListItem data= {item2} />
+                            {/* <ListItem data= {item2} /> */}
                         </div>
                     </div>
                 </div>
