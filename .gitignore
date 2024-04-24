@@ -12,6 +12,9 @@
 /ReactApplications/statemanagementroute/node_modules
 /ReactApplications/statemanagementroute/.pnp
 /ReactApplications/statemanagementroute/.pnp.js
+/ReactApplications/todoapp/node_modules
+/ReactApplications/todoapp/.pnp
+/ReactApplications/todoapp/.pnp.js
 
 #Other folder/paths
 /Images
