@@ -1,9 +1,11 @@
 /**
  * Desription : We can maintain states using useState hook or we can remove
+ *              Passing parameters or data from child to parent and parent to child component
  */
 
 import React, {useState} from "react";
 import ListItem from "../ListItem";
+import Form from "./Form";
 
 const item1 = {
     id : 1,
@@ -22,10 +24,6 @@ const item1 = {
 // }
 
 const Products = () => {
-    const [title, setTitle] = useState("");
-    const [price, setPrice] = useState(0);
-    const [discountedPrice, setDiscountedPrice] = useState(0);
-    const [thumbnail, setThumbnail] = useState('');
 
     const [item1, setItem1] = useState({
             id : 1,
@@ -43,56 +41,23 @@ const Products = () => {
     //     thumbnail: "200x150.png"
     // });
 
-    //Arrow function use to set the title
-    const handleTitle = (event) => {
-        console.log(event);
-        setTitle(event.target.value);
+    //Arrow function to handle all the cases
+    const handleInput = event => {
         setItem1({
             ...item1,
-            title : event.target.value
-        });
-    }
-
-    //Arrow function to set price
-    const handlePrice = event => {
-        setPrice(event.target.value);
-        setItem1({
-            ...item1,
-            price : event.target.value
-        });
-    }
-
-    //Arrow function to set discounted price
-    const handleDiscountedPrice = event => {
-        setDiscountedPrice(event.target.value);
-        setItem1({
-            ...item1,
-            discountedPrice : event.target.value
-        });
-    }
-    //Arrow function to set thumbnail
-    const handleThumbnail = event => {
-        setThumbnail(event.target.value);
-        setItem1({
-            ...item1,
-            thumbnail : event.target.value
+            [event.target.name] : event.target.value
         });
     }
 
     //Handle Form arrow function
     const submitForm = event => {
         event.preventDefault();
-        console.log({
-            title : title,
-            price,
-            discountedPrice,
-            thumbnail
-        });
 
-        if(discountedPrice > price ) {
+        if(item1.discountedPrice > item1.price ) {
             alert("Discounted price can not be greater than price.");
             return;
         }
+        console.log("Item Updated Successfully.", item1);
     }
 
     return(
@@ -104,48 +69,7 @@ const Products = () => {
 
         <div className={"product-wrapper"}>
             <div className={"form"} >
-                <form onSubmit={submitForm}>
-                    <h2>Item Card Details</h2>
-                    <div className={"input-field"}>
-                        <label htmlFor="title">Title</label>
-                        <input 
-                            type="text" 
-                            placeholder="Enter Title" 
-                            value={title}
-                            onChange={handleTitle} 
-                            required />
-                    </div>
-                    <div className={"input-field"}>
-                        <label htmlFor="title">Price</label>
-                        <input 
-                            type="text" 
-                            placeholder="Enter Price" 
-                            value={price}
-                            onChange={handlePrice} 
-                            required />
-                    </div>
-                    <div className={"input-field"}>
-                        <label htmlFor="title">Discounted Price</label>
-                        <input 
-                            type="text" 
-                            placeholder="Enter Discounted Price" 
-                            value={discountedPrice}
-                            onChange={handleDiscountedPrice} 
-                            required />
-                    </div>
-                    <div className={"input-field"}>
-                        <label htmlFor="title">Discounted Price</label>
-                        <input 
-                            type="text" 
-                            placeholder="Enter Thumbnail Name" 
-                            value={thumbnail}
-                            onChange={handleThumbnail} 
-                            required/>
-                    </div>
-                    <div className={"submit-wrap"} >
-                        <button>Update</button>
-                    </div>
-                </form>
+                <Form item = {item1} onChangeInput={handleInput} onFormSubmission={submitForm} />
             </div>
             <div>
                 <div >
