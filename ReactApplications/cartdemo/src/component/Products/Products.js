@@ -15,14 +15,6 @@ const item1 = {
     thumbnail: "200x150.png"
 }
 
-// const item2 = {
-//     id : 2,
-//     discountedPrice : 100,
-//     price : 80,
-//     title : "Title of the item 2",
-//     thumbnail: "200x150.png"
-// }
-
 const Products = () => {
 
     const [item1, setItem1] = useState({
@@ -32,14 +24,6 @@ const Products = () => {
             title : "Title of the item 1",
             thumbnail: "200x150.png"
     });
-
-    // const [item2, setItem2] = useState({
-    //     id : 2,
-    //     discountedPrice : 100,
-    //     price : 80,
-    //     title : "Title of the item 2",
-    //     thumbnail: "200x150.png"
-    // });
 
     //Arrow function to handle all the cases
     const handleInput = event => {
@@ -76,7 +60,6 @@ const Products = () => {
                     <div className={"product-list"}>
                         <div className={"product-list--wrapper"}>
                             <ListItem data= {item1} />
-                            {/* <ListItem data= {item2} /> */}
                         </div>
                     </div>
                 </div>
