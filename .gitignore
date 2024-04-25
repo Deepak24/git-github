@@ -15,6 +15,9 @@
 /ReactApplications/todoapp/node_modules
 /ReactApplications/todoapp/.pnp
 /ReactApplications/todoapp/.pnp.js
+/ReactApplications/timerapp/node_modules
+/ReactApplications/timerapp/.pnp
+/ReactApplications/timerapp/.pnp.js
 
 #Other folder/paths
 /Images
