@@ -1,6 +1,6 @@
 import AddToCartIcon from "../assets/icons/shopping-cart.svg";
 import {useState} from "react";//For maintaining states we need to add build in method useState
-const ListItem = ({data}) => {
+const ListItem = ({data, updateItemTitle}) => {
     //Declare counter variable
     const [counter, setCounter] = useState(0);
 
@@ -30,6 +30,7 @@ const ListItem = ({data}) => {
                     <h2>{data.title}</h2>
                 </div>
             </div>
+            <button onClick={() => updateItemTitle(data.id)}>Update the title</button>
             {//Conditional rendering with use of tertiary operator
                 counter < 1 ?
                     <button className={"cart-add"} onClick={increaseCounterByOne} >

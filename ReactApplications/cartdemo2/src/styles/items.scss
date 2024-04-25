@@ -87,7 +87,7 @@
         &--wrapper {
             display: flex;
             // padding-left: 40px;
-            // flex-wrap: wrap;
+            flex-wrap: wrap;
 
             .item-card {
                 cursor: pointer;
@@ -95,7 +95,7 @@
                 flex-direction: column;
                 height: inherit;
                 padding: 0;
-                width: 33.33%;
+                width: 16.66%;
                 margin: 16px;
                 border: 1px solid rgba($color: $black, $alpha: 0.1);
                 border-radius: 4px;
@@ -108,7 +108,7 @@
                         text-overflow: ellipsis;
                         font-size: 14px;
                         color: rgba($color: $black, $alpha: 0.8);
-                        white-space: nowrap;
+                        white-space: wrap;
                         overflow-x: hidden;
 
                         h3 {
