@@ -54,4 +54,42 @@ function delayPrint(num) {
   }
   
   printNumbers();
+
+  const arr3 = [];
+  console.log("Heloo " , typeof arr3);
   
+
+//
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+console.log (event.toLocaleString('en-IN', { timeZone: 'UTC' }));
+
+//
+function Car() {
+  this.make = 'Ferrari';
+  return { make: 'Mustang' };
+}
+
+const myCar = new Car();
+console.log(myCar.make);
+
+//
+
+Array.prototype.ourMap = function(callback) {
+	var arr = [];
+
+	for (var i = 0; i < this.length; i++) {
+		var result=callback(this[i], i, this);
+		arr.push(result);
+	}
+
+	return arr;
+}
+
+
+
+const myNumberArray = [1 , 2 , 3 , 4 , 5];
+const mapThoseNumbers = myNumberArray.map(function(myNumber) {
+	if(myNumber > 3) return myNumber;
+})
+
+console.log(mapThoseNumbers);
