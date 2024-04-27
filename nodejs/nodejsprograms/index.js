@@ -1,3 +1,8 @@
+/**
+ * Description : Node JS Program
+ *              Performing the file operation with Node js
+ */
+
 import http from 'http';
 import fs from 'fs';
 
@@ -7,7 +12,7 @@ const server = http.createServer((req,res) => {
     const file = fs.existsSync(path);
 
     if(req.url === "/") {
-        if(fs.existsSync("data/deepak")) {
+        if(fs.existsSync("data/deepak")) {//Check if file already exists
             res.end("Already exist");
         } else {
             fs.mkdirSync("data/deepak");
@@ -40,7 +45,7 @@ const server = http.createServer((req,res) => {
         } else {
             res.end("No File Found");
         }
-    } else if(req.url === "/deletefile") {
+    } else if(req.url === "/deletefile") {//Delete file operation
         if(file) {
             let ref = fs.unlinkSync(path);
             if(ref) {
@@ -57,6 +62,7 @@ const server = http.createServer((req,res) => {
 
 });
 
+//Listen server on 8899 port
 server.listen(PORT, (err) => {
     if(err) throw err;
     console.log(`The server work on ${PORT} number.`);

@@ -1,3 +1,8 @@
+/**
+ * Description : Create new server to listen client requests using http module 
+ *                  and bind server to 7788 port
+ */
+
 import http from "http"; //import http package
 const PORT = 7788; //define port
 const server = http.createServer((req, res) => {
