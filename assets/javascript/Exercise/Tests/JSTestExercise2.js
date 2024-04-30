@@ -1,5 +1,5 @@
 /**
- * Description : JS Exercise test - 1
+ * Description : JS Exercise test - 2
  */
 
 /**

@@ -1,5 +1,5 @@
 /**
- * Description: JavaScript basic question answers - Content 3
+ * Description: JavaScript basic question answers - exercise 3
  */
 
 //1

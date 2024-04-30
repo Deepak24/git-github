@@ -1,5 +1,5 @@
 /**
- * Description : JS test exercise 
+ * Description : JS test exercise 2
  */
 
 class Shape {
