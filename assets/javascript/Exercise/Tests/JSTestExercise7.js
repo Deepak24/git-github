@@ -1,5 +1,5 @@
 /**
- * Description: JavaScript Question and answer - Exercise 6
+ * Description: JavaScript Question and answer - Exercise 7
  */
 //1
 for(let i=1;i<=3;i++) {
@@ -38,7 +38,7 @@ func();//2
 
 
 //4
-const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const dateEvent = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 
-console.log (event.toLocaleString('en-IN', { timeZone: 'UTC' }));//20/12/2012, 3:00:00 am
+console.log (dateEvent.toLocaleString('en-IN', { timeZone: 'UTC' }));//20/12/2012, 3:00:00 am

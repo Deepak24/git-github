@@ -5,11 +5,12 @@
 import ListItem from "../ListItem1"
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import Loader from "../UI/Loader1";
 
 const Products = () => {
     
     const [item, setItems] = useState([]);
-
+    const [loader, setLoader] = useState(true);
     //We are getting callback hell condition here - We have replaced it with chaining process
     useEffect(() => {
         // fetch('https://reactdemo-cfbb9-default-rtdb.firebaseio.com/items.json')
@@ -39,6 +40,9 @@ const Products = () => {
                 console.log(error);
                 alert("Error Message" + error);
             }
+            finally{
+                setLoader(false);
+            }
         }
         fetchItems();//Give call to async function
        
@@ -65,25 +69,27 @@ const Products = () => {
     }
 
     return(
-
-        <div className={"product-wrapper"}>
-            <div>
-                <div >
-                    <div className={"product-list"}>
-                        <div className={"product-list--wrapper"}>
-                            {
-                                item.map((item) => {
-                                    console.log(item);
-                                    return (//Pass function as props to component
-                                        <ListItem key={item.id} data={item} updateItemTitle = {updateItemTitle} />
-                                    );
-                                })
-                            }
+        <>
+            <div className={"product-wrapper"}>
+                <div>
+                    <div >
+                        <div className={"product-list"}>
+                            <div className={"product-list--wrapper"}>
+                                {
+                                    item.map((item) => {
+                                        console.log(item);
+                                        return (//Pass function as props to component
+                                            <ListItem key={item.id} data={item} updateItemTitle = {updateItemTitle} />
+                                        );
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>        
+            {true && <Loader/> }
+        </>     
     )
 }
 
