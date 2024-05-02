@@ -7,14 +7,31 @@
 		
 	</head>
 	<body>
-		<h1>Javascript Program</h1>
-		<h2>Hello Javascript!!</h2>
-
+		<div class="container">
+			<h1>Javascript Program</h1>
+			<h2>Hello Javascript!!</h2>
+			<div id="parent">
+				<button id="child">Click me</button>
+			</div>
+		</div>
 		<script>
 			var empName = "Deepak";
 			document.write("Hello Console!");
 			document.write("type of "+ typeof empName);
 			console.log("Hello Javascript");
+
+			//New On Click Example
+			const parent = document.querySelector("#parent");
+			const child = document.querySelector("#child");
+
+			parent.addEventListener("click", function(event) {
+				console.log("Parent clicked!");
+			});
+
+			child.addEventListener("click", function(event) {
+				console.log("Child clicked!");
+			});
+
 		</script>
 	</body>
 </html>

@@ -22,13 +22,9 @@ Array.prototype.ourMap = function(callback) {
 	return arr;
 }
 
-
-
 const myNumberArray = [1 , 2 , 3 , 4 , 5];
 const mapThoseNumbers = myNumberArray.map(function(myNumber) {
 	if(myNumber > 3) return myNumber;
 })
 
-
-
-console.log(mapThoseNumbers);
+console.log(mapThoseNumbers);//Output - [ undefined, undefined, undefined, 4, 5 ]
