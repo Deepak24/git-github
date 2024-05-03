@@ -4,19 +4,35 @@ import Subheader from "./component/Layout/Subheader";
 import {useState} from "react";
 
 function App() {
-    const [cartItem, setCartItem] = useState(0);
+    const [cartItem, setCartItem] = useState([]);
 
-    const handleAddItem = () => {
-        setCartItem(cartItem + 1);
+    const handleAddItem = (item) => {
+        let items = [...cartItem];
+        let index = items.findIndex(i => i.id === item.id)
+        if(index > -1){
+            items[index] = item
+        } else {
+            items.push(item);
+        }
+        setCartItem([...items]);
+        // setCartItem(cartItem + 1);
     }
 
-    const handleRemoveItem = () => {
-        setCartItem(cartItem - 1);
+    const handleRemoveItem = (item) => {
+        let items = [...cartItem];
+        let index = items.findIndex(i => i.id === item.id);
+        if(items[index].quantity === 0) {
+            items.splice(index,1);
+        } else{
+            items[index] = item;
+        }
+        setCartItem([...items]);    
+        // setCartItem(cartItem - 1);
     }
 
     return (
         <div className="App">
-            <Header count={cartItem} />
+            <Header count={cartItem.length} items={cartItem}/>
             <Subheader />
             <Products onAddItem={handleAddItem} onRemoveItem={handleRemoveItem} />
         </div>

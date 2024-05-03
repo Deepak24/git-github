@@ -4,24 +4,25 @@ import Modal from "./UI/Modal";
 
 const ListItem = ({data, updateItemTitle, onAdd, onRemove}) => {
     //Declare counter variable
-    const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
     const [showModal, setShowModal] = useState(false);
 
     //Define the function to increse the count
     const increaseCounterByOne = (event) => {
         event.stopPropagation();
         onAdd(data.id);
-        setCounter(counter + 1);
+        // setCounter(counter + 1);
     }
 
     //Define function to decrese the count
     const decreaseCounterByOne = (event) => {
         event.stopPropogation();//stops event propagation   
-        if(counter <= 0 ) return;
-        if(counter === 1) {
-            onRemove(data.id);
-        }
-        setCounter( counter - 1);
+        onRemove(data.id);
+        // if(counter <= 0 ) return;
+        // if(counter === 1) {
+        //     onRemove(data.id);
+        // }
+        // setCounter( counter - 1);
     }
 
     const handleModal = () => {
@@ -46,7 +47,7 @@ const ListItem = ({data, updateItemTitle, onAdd, onRemove}) => {
                 </div>
                 <button onClick={() => updateItemTitle(data.id)}>Update the title</button>
                 {//Conditional rendering with use of tertiary operator
-                    counter < 1 ?
+                    data.quantity < 1 ?
                         <button className={"cart-add"} onClick={increaseCounterByOne} >
                             <span>Add to cart with prices</span>
                             <img src={AddToCartIcon} alt = " Cart icon" width="20" height="20" />
@@ -54,7 +55,7 @@ const ListItem = ({data, updateItemTitle, onAdd, onRemove}) => {
                         :
                         <div className={"cart-addon"}>
                             <button onClick={decreaseCounterByOne}><span>-</span></button>
-                            <span className={"counter"}>{counter}</span>
+                            <span className={"counter"}>{data.quantity}</span>
                             <button onClick={increaseCounterByOne}><span>+</span></button>
                         </div>
                 }
@@ -77,7 +78,7 @@ const ListItem = ({data, updateItemTitle, onAdd, onRemove}) => {
                         </div>
                     </div>
                     {//Conditional rendering with use of tertiary operator
-                        counter < 1 ? //Conditional displaying the button on modal
+                        data.quantity < 1 ? //Conditional displaying the button on modal
                         <button className={"cart-add card-add__modal"} onClick={increaseCounterByOne} >
                             <span>Add to cart with prices</span>
                             <img src={AddToCartIcon} alt = " Cart icon" width="20" height="20" />
@@ -85,7 +86,7 @@ const ListItem = ({data, updateItemTitle, onAdd, onRemove}) => {
                         :
                         <div className={"cart-addon card-addon__modal"}>
                             <button onClick={decreaseCounterByOne}><span>-</span></button>
-                            <span className={"counter"}>{counter}</span>
+                            <span className={"counter"}>{data.quantity}</span>
                             <button onClick={increaseCounterByOne}><span>+</span></button>
                         </div>
                     }
