@@ -7,10 +7,11 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Loader from "../UI/Loader1";
 
-const Products = () => {
+const Products = ({ onAddItem, onRemoveItem }) => {
     
     const [item, setItems] = useState([]);
     const [loader, setLoader] = useState(true);
+    const [presentItems, setPresentItems] = useState([]);
     //We are getting callback hell condition here - We have replaced it with chaining process
     useEffect(() => {
         // fetch('https://reactdemo-cfbb9-default-rtdb.firebaseio.com/items.json')
@@ -68,6 +69,25 @@ const Products = () => {
         }
     }
 
+    const handleAddItem = id => {
+        if(presentItems.indexOf(id) > -1) {
+            return;
+        }
+        setPresentItems([...presentItems, id]);
+        onAddItem();
+        
+    }
+
+    const handleRemoveItem = id => {
+        let index = presentItems.indexOf(id);
+        if(index > -1) {
+            let items = [...presentItems];
+            items.splice(index, 1);
+            setPresentItems([...items]);
+            onRemoveItem();
+        }
+    }
+
     return(
         <>
             <div className={"product-wrapper"}>
@@ -77,9 +97,8 @@ const Products = () => {
                             <div className={"product-list--wrapper"}>
                                 {
                                     item.map((item) => {
-                                        console.log(item);
                                         return (//Pass function as props to component
-                                            <ListItem key={item.id} data={item} updateItemTitle = {updateItemTitle} />
+                                            <ListItem onAdd={handleAddItem} onRemove={handleRemoveItem} key={item.id} data={item} updateItemTitle = {updateItemTitle} />
                                         );
                                     })
                                 }
@@ -88,7 +107,7 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-            {true && <Loader/> }
+            {loader && <Loader/> }
         </>     
     )
 }
