@@ -1,7 +1,8 @@
 import {Fragment, useState} from "react";
 import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
-const Cart = ({count, items}) => {
+
+const Cart = ({count, items, onHandleEvent}) => {
     const [showModal, setShowModal] = useState(false);
 
     const handleModal = () => {
@@ -29,7 +30,12 @@ const Cart = ({count, items}) => {
                             {
                                 count > 0 ? 
                                 items.map(item => {
-                                    return (<CartItem data={item} key={item.id} />)
+                                    return (
+                                        <CartItem data={item} 
+                                        onEmitIncreseItem={id => onHandleEvent(id, 1)} 
+                                        onEmitDecreseItem={id => onHandleEvent(id, -1)} 
+                                        key={item.id} 
+                                    />)
                                 })
                                  :
                                 <div className="empty-cart">Please add something in your cart!</div> 
@@ -42,6 +48,7 @@ const Cart = ({count, items}) => {
                                     <h4 >Total Amount: </h4>
                                     <h4 >
                                         {
+                                            //Calculating the total amount with reduce method from items array
                                             items.reduce((previous, current) => {
                                                 return previous + (current.discountedPrice * current.quantity)
                                             }, 0)

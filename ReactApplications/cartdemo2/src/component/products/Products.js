@@ -7,11 +7,10 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Loader from "../UI/Loader1";
 
-const Products = ({ onAddItem, onRemoveItem }) => {
+const Products = ({ onAddItem, onRemoveItem, eventState }) => {
     
     const [item, setItems] = useState([]);
     const [loader, setLoader] = useState(true);
-    const [presentItems, setPresentItems] = useState([]);
     //We are getting callback hell condition here - We have replaced it with chaining process
     useEffect(() => {
         // fetch('https://reactdemo-cfbb9-default-rtdb.firebaseio.com/items.json')
@@ -71,11 +70,6 @@ const Products = ({ onAddItem, onRemoveItem }) => {
     }
 
     const handleAddItem = id => {
-        // if(presentItems.indexOf(id) > -1) {
-        //     return;
-        // }
-        // setPresentItems([...presentItems, id]);
-        // onAddItem();
         let data = [...item];
         let index = data.findIndex(i => i.id === id);
         data[index].quantity += 1;
@@ -84,13 +78,6 @@ const Products = ({ onAddItem, onRemoveItem }) => {
     }
 
     const handleRemoveItem = id => {
-        // let index = presentItems.indexOf(id);
-        // if(index > -1) {
-        //     let items = [...presentItems];
-        //     items.splice(index, 1);
-        //     setPresentItems([...items]);
-        //     onRemoveItem();
-        // }
         let data = [...item];
         let index = data.findIndex(i => i.id === id);
         if(data[index].quantity !== 0) {
@@ -100,6 +87,16 @@ const Products = ({ onAddItem, onRemoveItem }) => {
         }
     }
 
+    useEffect(() => {
+        if(eventState.id) {
+            if(eventState.type === 1) {
+                handleAddItem(eventState.id);
+            } else if(eventState.type === -1) {
+                handleRemoveItem(eventState.id);
+            }
+        }
+    }, [eventState]);
+    
     return(
         <>
             <div className={"product-wrapper"}>
