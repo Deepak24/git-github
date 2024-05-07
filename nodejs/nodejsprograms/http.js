@@ -1,5 +1,6 @@
 /**
- * Description : Create new server to listen client requests using http module 
+ * Description : Node JS
+*                Create new server to listen client requests using http module/package 
  *                  and bind server to 7788 port
  */
 
@@ -34,8 +35,8 @@ const server = http.createServer((req, res) => {
 
 })
 
+//Listen server at mention port number
 server.listen(PORT, (err) => {
     if(err) throw err;
     console.log(`Server running on port ${PORT}`);
-})
-
+});
