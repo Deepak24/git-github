@@ -1,6 +1,11 @@
+/**
+ * Description : Node JS 
+ *              Using the fs package perform the file operations
+ */
+
 import fs from "fs";
 //Check if file is present or not
-const path = "data/first.txt";
+const path = "./data/first.txt";
 const file = fs.existsSync(path);
 if(!file) {
     //Create and read file

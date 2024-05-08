@@ -1,5 +1,5 @@
 /**
- * Node JS - This file reads 
+ * Node JS - Programm to read the file. Basic of Node js
  */
 
 import fs from "fs";
