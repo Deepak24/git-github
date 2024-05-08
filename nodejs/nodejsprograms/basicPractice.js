@@ -52,9 +52,9 @@ if(n === 0) {
 console.log(res);
 
 //5 - Volume of Cube
-let cubeSize = 0;
+let cubeSize = 5;
 const cubeVol = (cubeSize * cubeSize * cubeSize);
-console.log(cubeVol);   
+console.log(cubeVol);   // Output - 125
 
 //6 - Volume of Rectangle
 let len = 3;
@@ -62,4 +62,4 @@ let wid = 5;
 let het = 4;
 
 const rectVol = (len * wid * het);
-console.log(rectVol);
+console.log(rectVol);//60
