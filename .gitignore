@@ -19,6 +19,9 @@
 /ReactApplications/timerapp/.pnp
 /ReactApplications/timerapp/.pnp.js
 
+#From the Node js - Rest API folder
+/nodejs/RestAPI/node_modules
+
 #Other folder/paths
 /Images
 /assets/audio
