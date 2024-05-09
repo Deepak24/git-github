@@ -1,5 +1,5 @@
 /**
- * 
+ * Description : Node JS practice programs from text reference
  */
 //1
 function firstDigit(num) {
@@ -13,7 +13,8 @@ function firstDigit(num) {
     console.log(Math.floor(num));
 }
 
-firstDigit(265);
+//Find the first digit of the number
+firstDigit(265);//2
 
 
 //2- Print the square stars
@@ -30,13 +31,13 @@ function printSquare(num1) {
     }
 }
 
-printSquare(5);
+printSquare(5);//Print the stars in the provided number pattern
 
 //3 - Check index of string or position of the char in string
 let s = "Hello World!!";
 let p = "a";
 // code here
-console.log(s.indexOf(p));
+console.log(s.indexOf(p));//Output - -1 as the search char is not present in the string
 
 //4 - Factorial of a number
 const n = 5;
@@ -49,7 +50,7 @@ if(n === 0) {
     }
 }
 
-console.log(res);
+console.log(res);//
 
 //5 - Volume of Cube
 let cubeSize = 5;
