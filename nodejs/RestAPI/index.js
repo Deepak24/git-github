@@ -1,3 +1,3 @@
 /**
- * Description: Creating Rest API request by using Express and mongoose
+ * Description: Creating Rest API request by using Express and mongoose packages
  */

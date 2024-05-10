@@ -1,0 +1,2 @@
+Hello This is text file.
+We are reading this file with readFileSync method which works synchronously.

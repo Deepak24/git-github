@@ -1,5 +1,8 @@
 
-//
+/**
+ * Description: Adding the chanegs for exercise 
+ */
+//1
 console.log("Output")
 const person = { name: 'Sam Altman' };
 
@@ -12,7 +15,7 @@ function sayHi(age) {
 console.log(sayHi.call(person, 24));
 console.log(sayHi.bind(person, 25));
 
-//
+//2
 function* generator(i) {
   yield i;
   yield i * 2;
@@ -21,7 +24,7 @@ function* generator(i) {
  console.log(gen.next().value);
  console.log(gen.next().value);
 
- //
+ //3
  (() => {
   let x, y;
   try {
@@ -34,7 +37,7 @@ function* generator(i) {
   console.log(y);
 })();
 
-//
+//4
 function makeSandwich() {
     return 'Making sandwich!';
   }
@@ -45,10 +48,13 @@ function makeSandwich() {
   console.log(makeSandwich.prototype);
   console.log(eatSandwich.prototype);
 
-  //
+//5
 const person2 = { name1: 'Ramesh' };
 
 Object.defineProperty(person2, 'age', { value: 24 });
 
 console.log(person2);
 console.log(Object.keys(person2));
+
+//6
+console.log(typeof null);
