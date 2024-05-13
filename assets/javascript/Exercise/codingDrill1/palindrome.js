@@ -1,5 +1,5 @@
 /**
- * Exercise : Palindrome 
+ * Exercise : Palindrome - Checking the palindrome string 
  */
 
 //With inbuild methods
