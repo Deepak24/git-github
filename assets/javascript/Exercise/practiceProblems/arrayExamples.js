@@ -30,4 +30,18 @@ for(let iCnt =0; iCnt < arr1.length; iCnt++) {
 }
 console.log(intCnt);
 
+//Alternate number
 console.log(arr1.filter(el => el == 0).length);
+
+//4. Average of non negative number
+// let arrNumbers  = [1, 2, 3, 5, -7, -6];
+// let arrNumbers = [-12, 8, -7, 6, 12, -9, 14];
+let arrNumbers = [5, 0, 0, 0];
+const arrFil = arrNumbers.filter( num1 => num1 >= 0 );
+
+let intArrTotal = 0, intAverage = 0;
+for(let iArrCnt = 0; iArrCnt < arrFil.length; iArrCnt++) {
+    intArrTotal += arrFil[iArrCnt];
+    if( iArrCnt == (arrFil.length - 1) ) intAverage = intArrTotal/(iArrCnt+1);
+}
+console.log(intAverage);
