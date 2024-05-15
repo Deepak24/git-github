@@ -18,6 +18,9 @@
 /ReactApplications/timerapp/node_modules
 /ReactApplications/timerapp/.pnp
 /ReactApplications/timerapp/.pnp.js
+/ReactApplications/myvitetapp/node_modules
+/ReactApplications/myvitetapp/.pnp
+/ReactApplications/myvitetapp/.pnp.js
 
 #From the Node js - Rest API folder
 /nodejs/RestAPI/node_modules
