@@ -29,7 +29,6 @@ console.log(strReverse);
 function getLine(strInput){
     let str4 = '';
     let arrWords = strInput.split(" ");
-    console.log(arrWords);
     let strJoin = arrWords.join(" ");
     console.log(strJoin);
 }
