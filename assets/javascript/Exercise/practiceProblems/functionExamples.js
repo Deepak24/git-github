@@ -25,9 +25,7 @@ function findExtraCharacter(s1, s2) {
     let iSecond = 0;
     //Loop over first string to match it with char from second string
     for( iFirst =0; iFirst < l1; iFirst++ ) {
-        console.log("First String Char " + s1[iFirst]);
         for (iSecond = 0; iSecond < l2; iSecond++) {
-            console.log("Second String Char " +s2[iSecond]);
             if(s1[iFirst] == s2[iSecond]) break;
         }
 
@@ -40,3 +38,25 @@ function findExtraCharacter(s1, s2) {
 let str1 = "abcdef";
 let str2 = "gabcdef";
 console.log(findExtraCharacter(str1, str2));
+
+//
+let char1 = "a";
+let char2 = "g";
+let intChar1Code = char1.charCodeAt(0);
+let intChar2Code = char2.charCodeAt(0);
+
+console.log(intChar1Code);
+console.log(intChar2Code);
+
+// if( (char1 === char1.toUpperCase() && char2 === char2.toUpperCase()) || 
+//     (char1 !== char1.toUpperCase() || char2 !== char2.toUpperCase()) ) {
+    let alphabet = String.fromCharCode(...Array(intChar2Code+1).keys()).slice(intChar1Code);
+    console.log(alphabet.split("").join(' '));
+// } else {
+//     console.log("Both characters must be in same case that is either lowercase or uppercase");
+// }
+let strChar = '';
+for(let i = intChar1Code; i <= intChar2Code; i++) {
+    strChar += String.fromCharCode(i) + ' ';
+}
+console.log(strChar);
