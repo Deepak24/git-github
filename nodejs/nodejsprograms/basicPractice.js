@@ -1,7 +1,7 @@
 /**
  * Description : Node JS practice programs from text reference
  */
-//1
+//1 - Find the first digit of the number
 function firstDigit(num) {
     // write your code here
     if(num > 9) {
@@ -13,7 +13,6 @@ function firstDigit(num) {
     console.log(Math.floor(num));
 }
 
-//Find the first digit of the number
 firstDigit(265);//2
 
 
