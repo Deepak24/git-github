@@ -48,13 +48,9 @@ let intChar2Code = char2.charCodeAt(0);
 console.log(intChar1Code);
 console.log(intChar2Code);
 
-// if( (char1 === char1.toUpperCase() && char2 === char2.toUpperCase()) || 
-//     (char1 !== char1.toUpperCase() || char2 !== char2.toUpperCase()) ) {
-    let alphabet = String.fromCharCode(...Array(intChar2Code+1).keys()).slice(intChar1Code);
-    console.log(alphabet.split("").join(' '));
-// } else {
-//     console.log("Both characters must be in same case that is either lowercase or uppercase");
-// }
+let alphabet = String.fromCharCode(...Array(intChar2Code+1).keys()).slice(intChar1Code);
+console.log(alphabet.split("").join(' '));
+
 let strChar = '';
 for(let i = intChar1Code; i <= intChar2Code; i++) {
     strChar += String.fromCharCode(i) + ' ';
