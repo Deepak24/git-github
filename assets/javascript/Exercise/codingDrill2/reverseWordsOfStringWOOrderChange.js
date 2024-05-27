@@ -12,4 +12,4 @@ function reverseWordsOfString(str) {
 }
 
 const result = reverseWordsOfString(string1);
-console.log(result);
+console.log(result);//tcaer si a yrarbil
