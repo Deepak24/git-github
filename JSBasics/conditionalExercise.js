@@ -1,4 +1,6 @@
-
+/**
+ * Descriiption : JS String - Check string length conditionaly 
+ */
 const firstString = "apple";
 const secondString = "banana";
 const thirdString = "watermelon";

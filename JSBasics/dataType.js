@@ -1,32 +1,32 @@
 /**
- * Data type
+ * Description : JS Data type
  */
 /**
- * String - Data type
+ * Data type 1 - String
 */
 let userName = "Deepak";
 console.log(userName);
 console.log("Type Of UserName", typeof userName);
 
 /**
- * Number - Data Type
+ * Data type 2 - Number
  */
 let age = 35;
 console.log(age);
 console.log(typeof age);
 
-let FraNum = 99.5;
-console.log(FraNum);
+let FractionNum = 99.5;
+console.log(FractionNum);
 
 /**
- * Boolean - Data Type
+ * Data type 3 - Boolean 
  */
 let ifProductInCart = false;
 console.log(ifProductInCart);
-console.log(typeof ifProductInCart);
+console.log("Type of ifProductInCart " + typeof ifProductInCart);
 
 /**
- * undefined - Data type
+ * Data type 4 - undefined 
 */
 
 let user2Name;
@@ -34,14 +34,14 @@ console.log(user2Name);
 console.log(typeof user2Name);
 
 /**
- * Null - Data type
+ * Data type 5- Null
  */
 let noValue = null;
 console.log(noValue);
 console.log(typeof noValue);
 
 /**
- * Object - data type - Non Primitive data type
+ * Data type 6 - Object - Non Primitive data type
  */
 const personDetails = {
     myName : "Deepak",

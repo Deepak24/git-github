@@ -1,5 +1,5 @@
 /**
- * JavaScript Functions:
+ * JavaScript Functions: Checking the JS functions
  */
 
 //Function to calculate the addition
@@ -19,7 +19,7 @@ subNumber(10, 5);
  * Anonymous function
  */
 var greet = function(){
-    console.log("Welcome to Greet!");
+    console.log("Welcome Greeting!");
 };
 
 greet();
@@ -48,7 +48,7 @@ function greetName(name) {
     console.log('${name}, Welcome to HERE!');
 }
 
-greetName("Geek");
+greetName("Deepak");
 
 function greet1(name1){
     return "Hello, " + (name1 || "Stranger") + "!";
