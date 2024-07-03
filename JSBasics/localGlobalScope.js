@@ -42,7 +42,7 @@ console.log(b1);
 //Variable declared with let and const always have block Scope. 
 {
     const ab = 10;
-    console.log("Const variable in block ", ab);
+    console.log("Const variable in block scope ", ab);
 }
 // console.log("Const variable in outside block ", ab);
 

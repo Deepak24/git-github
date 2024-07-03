@@ -1,11 +1,11 @@
 /**
- * JS Operators
+ * Description : JS Operators - Different type of JavaScript operators
  */
 
 const x= 12;
 const y=3;
 
-console.log(x + y); // Output - 15
+console.log(x + y); // Output - 15 - 
 console.log(x - y); // Output - 9
 console.log( x * y); // Output - 36
 console.log( x / y );// Output - 4

@@ -34,4 +34,6 @@ console.log(calculateDiffrence(30, 15));//Output - 15
 const sumDiff = (numr1, numr2) => numr1 < numr2 ? numr1 + numr2 : numr1 - numr2;
 
 const sumDiffRes = sumDiff(20, 52);
+const sumDiffRes2 = sumDiff(56, 22);
 console.log(sumDiffRes);//Output - 72
+console.log(sumDiffRes2);//Output - 34
