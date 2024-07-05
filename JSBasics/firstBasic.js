@@ -22,7 +22,7 @@ console.log(7+43);
 
 // console.log(a);
 
-//Exercise
+//Exercise - Checking the scope if variables
 var a =10;
 function first(){
     function second(){
@@ -39,4 +39,4 @@ function first(){
 }
 
 first();
-console.log(a);
+console.log("Priting after first function call " + a);

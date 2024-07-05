@@ -29,6 +29,7 @@ f1();
     console.log(a);
     console.log(b);
 }
+// console.log(a);//Will get ReferencedError - a is not defined
 
 //var variable scope
 {
@@ -45,4 +46,3 @@ console.log(b1);
     console.log("Const variable in block scope ", ab);
 }
 // console.log("Const variable in outside block ", ab);
-
