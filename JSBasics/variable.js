@@ -1,16 +1,16 @@
-/*
-* Variables
+/**
+ * Description: Variables with the types -  Checking the variable with there types
+ * 
  */
-
 var name;
-var message;
-message = "Hello World!!"
-console.log(message);
-var message = "Redeclare Message ";
-console.log(message);
+var strMessage;
+strMessage = "Hello World!!"
+console.log(strMessage);
+var strMessage = "Redeclare strMessage variable";
+console.log(strMessage);
 
-message = "My name is Deepak";
-console.log(message);
+strMessage = "My name is Deepak";
+console.log(strMessage);
 
 let text; //Creating variable or declaring the variable
 text = "JavaScript is great!!";
@@ -26,7 +26,7 @@ console.log(number);
 const NewNumb = 100;
 console.log(NewNumb);
 
-//Variable Naming convention
+//Variable Naming convention as per the Javascript 
 
 let userName;
 let age;

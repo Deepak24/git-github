@@ -1,3 +1,7 @@
+/**
+ * Description: Tertiaty Operators -  Checking the tertiary operator conditions
+ * 
+ */
 const totalMarked = 60;
 
 const strMessage = (totalMarked < 40 ) ? "You need more marks!" : "You are score is goood";
@@ -19,6 +23,6 @@ const totalScoredMark = 70;
 //     console.log("Genius");
 // }
 
-//Use of ternary operator 
+//Use of ternary operator replacing the if else conditions
 const result = totalScoredMark < 40 ? "You need to work hard" : totalScoredMark < 60 ? "B Grade" : totalScoredMark < 75 ? "A Grade" : totalScoredMark < 85 ? "A+ Grade" : "Genius";
 console.log(result);
