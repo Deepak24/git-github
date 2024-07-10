@@ -1,5 +1,5 @@
 /**
- * Description: Array concatenation
+ * Description: Array concatenation using in built method
  */
 
 //
