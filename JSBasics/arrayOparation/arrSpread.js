@@ -10,6 +10,7 @@ const arr2 = [8,9];
 const arr3 = [...arr1, 6, 7, ...arr2, 10];
 
 console.log(arr3);
+//Output - [ 1, 2, 3, 4,  5,  6, 7, 8, 9, 10]
 const arr4 = [...arr1, ...arr2];
 console.log(arr4); // [ 1, 2, 3, 4, 5, 8, 9 ]
 
@@ -25,7 +26,7 @@ const user = {
     city : "Pune"
 }
 const clonedUser = {...user};
-console.log(user);
+console.log(user);//{ name: 'Deepak', age: 35, city: 'Pune' }
 
 const user1 = {
     name : "Deepak1",
