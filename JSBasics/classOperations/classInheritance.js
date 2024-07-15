@@ -27,6 +27,8 @@ class Dell extends Laptop {
 
 const dell1 =  new Dell("8GM", "Intel", 15, "D3250", 45000);
 console.log(dell1);
+const del12 = new Dell("4GB","AMD", 12, "BM-2334", 40000);
+console.log(del12);
 
 class Lenovo {
 
