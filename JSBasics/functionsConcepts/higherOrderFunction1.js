@@ -5,6 +5,7 @@
  */
 
 const arr1 = [1,2,3,4,5];
+
 function square(number1){
     return number1 ** 2;
 }
@@ -21,8 +22,10 @@ function calculatePower(wrapper, arr1) {
     return arrTotal;
 }
 
+//Function receives function as a argument
 const squareOfNumbers = calculatePower(square, arr1);
 console.log(squareOfNumbers);
 
+//Function receives function as a argument
 const cubeOfNumbers = calculatePower(cube, arr1);
 console.log(cubeOfNumbers);

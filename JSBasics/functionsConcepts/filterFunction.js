@@ -6,6 +6,7 @@
 
 const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
 
+//Custom function to apply the filter
 function filterNumber(arr1){
     const arrTemp = [];
     for(let number1 of arr1) {
@@ -18,11 +19,11 @@ function filterNumber(arr1){
 
 //With regular function
 const output = filterNumber(arr1);
-console.log(output);
+console.log(output);//Output [ 6, 7, 8 ]
 
 //With fat arrow function for filter method
 const outputFil = arr1.filter(number1 => number1 > 5);
-console.log(outputFil);
+console.log(outputFil);//Output - [ 6, 7, 8 ]
 
 //Example for filter with mod operator
 const arr2 = new Array(1, 2, 3, 6, 5, 4);
@@ -30,4 +31,4 @@ var arrNew = arr2.filter(function (x){
     return x % 2 == 0;
 });
 
-console.log(arrNew);
+console.log(arrNew);//Output - [ 2, 6, 4 ]

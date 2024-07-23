@@ -1,9 +1,9 @@
 /**
  * Description : Pure Function :)
  * 1. It takes an argument
- * 2. It should retunr something
+ * 2. It should return something
  * 3. For same input you should get same output
- * 4 The result should not be influenced by Outer parameter
+ * 4  The result should not be influenced by Outer parameter
  * 5. It should not mutate the argument
  */
 

@@ -39,4 +39,4 @@ function squareOfNumber(){
 }
 
 const output = squareOfNumber(arr1);
-console.log(output);
+console.log(output);//Output - [ 1, 4, 9, 16 ]

@@ -4,8 +4,8 @@
  */
 
 function a(wrapper) {
-    console.log("Hello");
-    console.log(wrapper);
+    console.log("Hello");//Output : Hello
+    console.log(wrapper);//Output - [Function: b]
     wrapper();
 }
 
@@ -17,8 +17,7 @@ function b(){
 a(b);
 
 //With setTimeout web API
-console.log("Hello");
+console.log("Hello in Next console");
 setTimeout(function callback() {
-    console.log("Executed after delay");
+    console.log("Executed after delay");//Executed after delayed of 2 seconds
 }, 2000);
-
