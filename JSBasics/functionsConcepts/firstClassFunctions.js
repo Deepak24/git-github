@@ -2,7 +2,6 @@
  * Description : First Class Functions
  *              A programming language is said to have First-class functions 
 *               if functions in that language are treated like other variables. 
-
                 Functions are treated like value and are just another type of object
  */
 //Assigned funtion to variable

@@ -8,8 +8,7 @@ function sayHello(){
     return "Hello";
 }
 
-//Function helloMessage receives funtion sayHello as a parameter
-// Therefore helloMessage is Higher Order function
+//Function helloMessage receives funtion sayHello as a parameter. Therefore helloMessage is Higher Order function
 
 function helloMessage(sayHello){
     console.log(sayHello(), "World");
