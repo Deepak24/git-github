@@ -1,5 +1,6 @@
 /**
  * Description: Variables with the types -  Checking the variable with there types
+ *              JS is having var, let and const type variables
  * 
  */
 var name;
