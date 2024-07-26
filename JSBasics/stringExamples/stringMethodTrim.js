@@ -4,7 +4,7 @@
 
 const strText = "   Hello this is sample text     ";
 console.log(strText);
-console.log(strText.trim());
+console.log("This is trimmed text \n" + strText.trim());
 
 console.log(strText.trim().substring(0, 5));
 

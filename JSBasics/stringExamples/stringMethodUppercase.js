@@ -17,9 +17,7 @@ for(let chara of strMessage1 ) {
     if( Vowel1.includes(chara.toLowerCase()) ) {
         flag = true;
         break;
-    } else {
-        flag = false;
-    }
+    } 
 }
 
 if (flag) {
